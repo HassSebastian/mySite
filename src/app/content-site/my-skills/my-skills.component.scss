@@ -6,9 +6,31 @@
   height: 104px;
 }
 
-.font{
-    font-family: 'Overpass';
-    font-size: 16px;
-    font-weight: 900;
-    margin-top: 8px;
+.font {
+  font-family: "Overpass";
+  font-size: 16px;
+  font-weight: 900;
+  margin-top: 8px;
+}
+
+.itemStyle {
+  width: 75px;
+  height: 76px;
+  filter: brightness(0);
+}
+
+.skillHover {
+  img {
+    transition: transform 250ms;
+  }
+  &:hover {
+    span {
+      color: #ff9900;
+    }
+    img {
+      filter: brightness(1) !important;
+      transform: scale(1.5) rotateY(360deg);
+      transform-origin: center center 10px;
+    }
+  }
 }

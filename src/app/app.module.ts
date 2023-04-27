@@ -10,6 +10,12 @@ import { ContentSiteComponent } from './content-site/content-site.component';
 import { HeadlineComponent } from './content-site/headline/headline.component';
 import { AboutMeComponent } from './content-site/about-me/about-me.component';
 import { MySkillsComponent } from './content-site/my-skills/my-skills.component';
+import { PortfolioComponent } from './content-site/portfolio/portfolio.component';
+import { PotfolioHeadlineComponent } from './content-site/portfolio/potfolio-headline/potfolio-headline.component';
+import { PotfolioJoinComponent } from './content-site/portfolio/potfolio-join/potfolio-join.component';
+import { PotfolioElPolloComponent } from './content-site/portfolio/potfolio-el-pollo/potfolio-el-pollo.component';
+import { PotfolioPokedexComponent } from './content-site/portfolio/potfolio-pokedex/potfolio-pokedex.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { MySkillsComponent } from './content-site/my-skills/my-skills.component'
     ContentSiteComponent,
     HeadlineComponent,
     AboutMeComponent,
-    MySkillsComponent
+    MySkillsComponent,
+    PortfolioComponent,
+    PotfolioHeadlineComponent,
+    PotfolioJoinComponent,
+    PotfolioElPolloComponent,
+    PotfolioPokedexComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
