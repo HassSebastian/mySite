@@ -1,0 +1,22 @@
+.hover {
+  &:hover {
+    color: #ff9900;
+  }
+}
+
+.buttonHover {
+  &:hover {
+    cursor: pointer;
+    font-weight: 900 !important;
+    animation: hoverButton 100ms ease-out forwards;
+  }
+}
+
+@keyframes hoverButton {
+  from {
+    width: 213px
+  }
+  to {
+    width: 250px;
+  }
+}

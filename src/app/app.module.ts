@@ -9,6 +9,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ContentSiteComponent } from './content-site/content-site.component';
 import { HeadlineComponent } from './content-site/headline/headline.component';
 import { AboutMeComponent } from './content-site/about-me/about-me.component';
+import { MySkillsComponent } from './content-site/my-skills/my-skills.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AboutMeComponent } from './content-site/about-me/about-me.component';
     HeaderComponent,
     ContentSiteComponent,
     HeadlineComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    MySkillsComponent
   ],
   imports: [
     BrowserModule,
