@@ -21,6 +21,7 @@ import { FooterLegalNoticeComponent } from './footer/footer-legal-notice/footer-
 import { FooterMessageAreaComponent } from './footer/footer-message-area/footer-message-area.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PortfolioRofComponent } from './content-site/portfolio/portfolio-rof/portfolio-rof.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterHeadlineComponent,
     FooterLegalNoticeComponent,
     FooterMessageAreaComponent,
+    PortfolioRofComponent,
   ],
   imports: [
     BrowserModule,
