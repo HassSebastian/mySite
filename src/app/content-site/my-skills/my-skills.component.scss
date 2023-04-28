@@ -29,7 +29,7 @@
     }
     img {
       filter: brightness(1) !important;
-      transform: scale(1.5) rotateY(360deg);
+      transform: scale(1.5) rotateY(360deg) translateY(-20px);
       transform-origin: center center 10px;
     }
   }

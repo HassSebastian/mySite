@@ -16,6 +16,11 @@ import { PotfolioJoinComponent } from './content-site/portfolio/potfolio-join/po
 import { PotfolioElPolloComponent } from './content-site/portfolio/potfolio-el-pollo/potfolio-el-pollo.component';
 import { PotfolioPokedexComponent } from './content-site/portfolio/potfolio-pokedex/potfolio-pokedex.component';
 import { FooterComponent } from './footer/footer.component';
+import { FooterHeadlineComponent } from './footer/footer-headline/footer-headline.component';
+import { FooterLegalNoticeComponent } from './footer/footer-legal-notice/footer-legal-notice.component';
+import { FooterMessageAreaComponent } from './footer/footer-message-area/footer-message-area.component';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,15 +35,20 @@ import { FooterComponent } from './footer/footer.component';
     PotfolioJoinComponent,
     PotfolioElPolloComponent,
     PotfolioPokedexComponent,
-    FooterComponent
+    FooterComponent,
+    FooterHeadlineComponent,
+    FooterLegalNoticeComponent,
+    FooterMessageAreaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     ModalModule.forRoot(),
+    MatInputModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
