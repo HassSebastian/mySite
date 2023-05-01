@@ -1,0 +1,40 @@
+.descriptionContainer{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding-bottom: 32px;
+width: 50%;
+height: auto;
+gap: 16px;
+}
+
+.fontHeadline{
+font-family: 'Syne';
+font-size: 45px;
+font-weight: 800;
+font-style: normal;
+}
+.fontLanguage{
+  font-family: 'Overpass';
+  font-size: 23px;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff9900;
+}
+.fontDescription{
+  font-family: 'Overpass';
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+@keyframes descriptionHover{
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(-300px);
+  }
+}
