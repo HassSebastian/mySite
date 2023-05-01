@@ -1,1 +1,24 @@
-<p>potfolio-el-pollo works!</p>
+<div class="d-flex justify-content-between m-5">
+  <div class="w-50 border order-2 image-container">
+    <img 
+      style="width: 100%; aspect-ratio: 1.6/1"
+      src="./assets/img/project/el-pollo-start.png"
+      (mouseenter)="showImage = true"
+      (mouseleave)="showImage = false"
+    />
+  </div>
+  <div
+    class="w-50 border text-start order-1"
+    style="font-family: 'Syne'; font-size: 48px; font-weight: 700"
+  >
+    <span>03/04 el polo</span>
+    <img
+    style="width: 70%; aspect-ratio: 1.6/1"
+    src="./assets/img/project/el-pollo-game.png"
+    (mouseenter)="showImage = true"
+    (mouseleave)="showImage = false"
+    [ngClass]="showImage ? 'd-block':'d-none'"
+  />
+
+  </div>
+</div>

@@ -1,0 +1,7 @@
+.imgHover{
+    &:hover{
+        cursor: pointer;
+        transition: 200ms ease;
+        transform: translateY(-10px);
+    }
+}
