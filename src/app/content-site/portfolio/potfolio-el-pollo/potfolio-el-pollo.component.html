@@ -1,24 +1,71 @@
-<div class="d-flex justify-content-between m-5">
-  <div class="w-50 border order-2 image-container">
-    <img 
-      style="width: 100%; aspect-ratio: 1.6/1"
+<div class="w-100">
+  <div
+    class="border text-start ms-5 me-5"
+    style="font-family: 'Syne'; font-size: 48px; font-weight: 700"
+  >
+    <span>03/04</span>
+  </div>
+
+  <div class="d-flex justify-content-end border ms-5 me-5">
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 32px;
+        width: 50%;
+        height: auto;
+        gap: 16px;
+      "
+    >
+      <span
+        style="
+          font-family: 'Syne';
+          font-size: 45px;
+          font-weight: 800;
+          font-style: normal;
+        "
+        >El Pollo Loco</span
+      >
+      <span
+        style="
+          font-family: 'Overpass';
+          font-size: 23px;
+          font-weight: 400;
+          font-style: normal;
+          color: #ff9900;
+        "
+        >JavaScript | HTML | CSS</span
+      >
+      <span
+        style="
+          font-family: 'Overpass';
+          font-size: 16px;
+          font-weight: 400;
+          font-style: normal;
+        "
+        >Javascript-based and object-orientated jump & and run game. Help Pepe
+        save the village from El Pollo Loco!</span
+      >
+      <div
+        class="d-flex align-items-center justify-content-center buttonHover"
+        style="
+          width: 213px;
+          height: 68px;
+          border: 4px solid black;
+          font-family: 'Overpass';
+          font-weight: 400;
+          font-size: 23px;
+        "
+      >
+        Let's talk
+      </div>
+    </div>
+    <img
+      style="width: 50%; aspect-ratio: 1.6/1"
       src="./assets/img/project/el-pollo-start.png"
       (mouseenter)="showImage = true"
       (mouseleave)="showImage = false"
     />
-  </div>
-  <div
-    class="w-50 border text-start order-1"
-    style="font-family: 'Syne'; font-size: 48px; font-weight: 700"
-  >
-    <span>03/04 el polo</span>
-    <img
-    style="width: 70%; aspect-ratio: 1.6/1"
-    src="./assets/img/project/el-pollo-game.png"
-    (mouseenter)="showImage = true"
-    (mouseleave)="showImage = false"
-    [ngClass]="showImage ? 'd-block':'d-none'"
-  />
-
   </div>
 </div>
