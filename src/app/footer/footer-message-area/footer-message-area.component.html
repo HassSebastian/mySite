@@ -1,44 +1,35 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input
-      class="text-white"
-      type="name"
-      matInput
-      [formControl]="emailFormControl"
-      [errorStateMatcher]="matcher"
-      placeholder="Name"
-    />
-    <mat-error
-      *ngIf="
-        emailFormControl.hasError('name') &&
-        !emailFormControl.hasError('required')
-      "
-    >
-      Please enter a valid email address
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      Email is <strong>required</strong>
-    </mat-error>
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input
-      class="text-white"
-      type="email"
-      matInput
-      [formControl]="emailFormControl"
-      [errorStateMatcher]="matcher"
-      placeholder="Email"
-    />
-    <mat-error
-      *ngIf="
-        emailFormControl.hasError('email') &&
-        !emailFormControl.hasError('required')
-      "
-    >
-      Please enter a valid email address
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      Email is <strong>required</strong>
-    </mat-error>
-  </mat-form-field>
+<form class="d-flex flex-column align-items-center row g-4 needs-validation was-validated" (ngSubmit)="submitForm()" [formGroup]="myForm" novalidate>
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip01" class="form-label">Name</label>
+    <input type="text" class="form-control text-white" id="validationTooltip01" formControlName="firstName" placeholder="Your name" required>
+    <div class="valid-tooltip">
+      Sieht gut aus!
+    </div>
+  </div>
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltipUsername" class="form-label">Email Adresse</label>
+    <div class="input-group has-validation">
+      <input type="email" class="form-control text-white" id="validationTooltipUsername" formControlName="email" placeholder="Your email" required>
+      <div class="invalid-tooltip">
+        Noch keine gültige Emailadresse!
+      </div>
+      <div class="valid-tooltip">
+        Sieht gut aus!
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 position-relative">
+    <label for="validationTextarea" class="form-label">Textbereich</label>
+    <textarea class="form-control text-white" id="validationTextarea" formControlName="message" placeholder="Your message" required></textarea>
+    <div class="valid-tooltip">
+      Sieht gut aus!
+    </div>
+  </div>
+  <div class="col-2">
+    <div
+    class="d-flex align-items-center justify-content-center buttonHover"
+  >
+    Send message
+  </div>
+</div>
 </form>

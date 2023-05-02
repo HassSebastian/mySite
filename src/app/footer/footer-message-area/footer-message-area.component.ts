@@ -1,13 +1,6 @@
-import { Component } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
-}
 
 
 
@@ -16,9 +9,28 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   templateUrl: './footer-message-area.component.html',
   styleUrls: ['./footer-message-area.component.scss']
 })
-export class FooterMessageAreaComponent {
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+export class FooterMessageAreaComponent implements OnInit {
+  myForm!: FormGroup;
 
-  matcher = new MyErrorStateMatcher();
+  constructor(private formBuilder: FormBuilder) {}
 
+  ngOnInit() {
+    this.myForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required]
+    });
+  }
+
+  submitForm() {
+    if (this.myForm.invalid) {
+      // Markiere alle Felder als berührt, um Fehlermeldungen anzuzeigen
+      this.myForm.markAllAsTouched();
+      return;
+    }
+
+    // Formular ist gültig, führen Sie hier Ihre Aktionen aus (z. B. Daten senden)
+    console.log('Formular wurde abgesendet');
+  }
 }
