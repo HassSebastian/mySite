@@ -26,19 +26,18 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #f8f8f8;
+  background-color: #fffcf3;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
+  z-index: 0;
   transition: opacity 300ms;
-}
-
-.menu-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.menu-list li {
-  padding: 10px;
+  span {
+    position: relative;
+    font-family: "Syne";
+    font-size: 96px;
+    font-weight: 700;
+    z-index: 0;
+  }
 }

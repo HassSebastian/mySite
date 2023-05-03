@@ -16,6 +16,7 @@ import {
       state(
         'in',
         style({
+          top: 92,
           opacity: 1,
         })
       ),
