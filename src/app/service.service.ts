@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ServiceService {
-  showMenu: boolean = false;
+  private showMenu: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public value$: Observable<boolean> = this.showMenu.asObservable();
 
-  toggleMenu(): void {
-    this.showMenu = !this.showMenu;
+
+  setValue(value: boolean): void {
+    this.showMenu.next(value);
   }
 
+  getValue(): boolean {
+    return this.showMenu.getValue();
+  }
   constructor() {}
 }

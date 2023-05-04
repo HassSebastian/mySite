@@ -17,27 +17,7 @@
   }
 }
 
-.hamburger-button.open {
+.hamburger-button-open {
   transform: rotate(-90deg);
 }
 
-.menu-container {
-  position: fixed;
-  bottom: -580px;
-  left: 0;
-  right: 0;
-  background-color: #fffcf3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  z-index: 0;
-  transition: opacity 300ms;
-  span {
-    position: relative;
-    font-family: "Syne";
-    font-size: 96px;
-    font-weight: 700;
-    z-index: 0;
-  }
-}

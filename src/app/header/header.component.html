@@ -8,7 +8,7 @@
 
   <div
     class="hamburger-button"
-    [ngClass]="{ open: showMenu }"
+    [class.hamburger-button-open]="selectRespoMenu()"
     (click)="toggleMenu()"
   >
     <div></div>

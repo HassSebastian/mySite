@@ -9,11 +9,14 @@ import { ServiceService } from '../service.service';
 export class HeaderComponent {
 
   constructor(public service: ServiceService){}
-  showMenu = this.service.showMenu;
 
   ngOnInit(): void {}
 
   toggleMenu(): void {
-    this.service.toggleMenu();
+    const currentValue = this.service.getValue();
+    this.service.setValue(!currentValue);
+  }
+  selectRespoMenu(){
+    return this.service.getValue(); 
   }
 }
