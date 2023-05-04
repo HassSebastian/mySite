@@ -1,36 +1,44 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-
-
-
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-footer-message-area',
   templateUrl: './footer-message-area.component.html',
-  styleUrls: ['./footer-message-area.component.scss']
+  styleUrls: ['./footer-message-area.component.scss'],
 })
 export class FooterMessageAreaComponent implements OnInit {
-  myForm!: FormGroup;
+  @ViewChild('myForm') myForm!: ElementRef;
+  @ViewChild('nameField') nameField!: ElementRef;
+  @ViewChild('emailField') emailField!: ElementRef;
+  @ViewChild('messageField') messageField!: ElementRef;
+  @ViewChild('sendButton') sendButton!: ElementRef;
+  ngOnInit(): void {}
 
-  constructor(private formBuilder: FormBuilder) {}
+  async sendMail() {
+    let nameField = this.nameField.nativeElement;
+    let emailField = this.emailField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
+    nameField.disabled = true;
+    emailField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+ 
+    //animation anzeigen für senden
+    let fd = new FormData();
+    fd.append('name',nameField.value);
+    fd.append('email',emailField.value);
+    fd.append('message',messageField.value);
 
-  ngOnInit() {
-    this.myForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', Validators.required]
+
+    await fetch('https://sebastian-hass.developerakademie.net/send_mail/send_mail.php', {
+      method: 'POST',
+      body:fd
     });
-  }
 
-  submitForm() {
-    if (this.myForm.invalid) {
-      // Markiere alle Felder als berührt, um Fehlermeldungen anzuzeigen
-      this.myForm.markAllAsTouched();
-      return;
-    }
-
-    // Formular ist gültig, führen Sie hier Ihre Aktionen aus (z. B. Daten senden)
-    console.log('Formular wurde abgesendet');
+    // animation anzeigen für gesendet
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;
   }
 }

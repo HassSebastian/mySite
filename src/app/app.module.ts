@@ -22,6 +22,7 @@ import { FooterMessageAreaComponent } from './footer/footer-message-area/footer-
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioRofComponent } from './content-site/portfolio/portfolio-rof/portfolio-rof.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { PortfolioRofComponent } from './content-site/portfolio/portfolio-rof/po
     ModalModule.forRoot(),
     MatInputModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
