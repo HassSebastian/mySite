@@ -77,6 +77,9 @@ body {
 }
 
 .buttonHover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 213px;
   height: 68px;
   border: 4px solid black;

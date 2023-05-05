@@ -1,6 +1,15 @@
-.respoMenuFont{
-    font-family: 'Syne';
-    font-size: 96px;
-    font-weight: 700;
-    font-style: normal;
+.respoMenuFont {
+  font-family: "Syne";
+  font-size: 96px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@keyframes respoOpenAnimation {
+  from {
+    top: 1000px;
+  }
+  to {
+    top: 92px;
+  }
 }

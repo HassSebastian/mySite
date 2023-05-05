@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-responsive-menu',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./responsive-menu.component.scss']
 })
 export class ResponsiveMenuComponent {
+  constructor(private service:ServiceService){}
+
+  respoMenu(){
+    return this.service.getValue(); 
+  }
 
 }

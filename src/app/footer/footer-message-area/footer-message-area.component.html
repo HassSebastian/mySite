@@ -1,8 +1,31 @@
-<form (submit)="sendMail()" #myForm>
-  <div class="d-flex flex-column align-items-center gap-4">
-    <input type="text" name="name" #nameField />
-    <input type="email" name="email" #emailField/>
-    <textarea type="text" name="message" #messageField></textarea>
-    <button #sendButton>Senden</button>
+<div class="d-flex justify-content-center">
+  <div class="d-flex flex-column align-items-center messageBox">
+    <div class="w-100">
+      <span class="">Your Name</span>
+      <input
+        class="w-100"
+        type="text"
+        name="name"
+        placeholder="First and last name please"
+        #nameField
+      />
+      <div class="required">{{ nameRequired }}</div>
+    </div>
+    <div class="w-100">
+      <span class="">Your Email</span>
+      <input class="w-100" type="email" name="email" #emailField />
+      <div class="required">{{ emailRequired }}</div>
+    </div>
+    <div class="w-100">
+      <span>Your Message</span>
+      <textarea
+        class="w-100"
+        type="text"
+        name="message"
+        #messageField
+      ></textarea>
+      <div class="required">{{ messageRequired }}</div>
+    </div>
+    <div class="buttonHover" (click)="sendMail()" #sendButton>Senden</div>
   </div>
-</form>
+</div>

@@ -6,11 +6,22 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./footer-message-area.component.scss'],
 })
 export class FooterMessageAreaComponent implements OnInit {
-  @ViewChild('myForm') myForm!: ElementRef;
+  nameTest = /^[a-zA-Zäöüß]{1,50}\s[a-zA-Zäöüß]{1,50}$/;
+  emailTest = /\S+@\S+\.\S+/;
+  messageTest = /^[a-zA-Z0-9\s.,:;!?]*$/;
+
+  // @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
   @ViewChild('sendButton') sendButton!: ElementRef;
+  nameRequired: string = 'First and last name please';
+  emailRequired: string = 'Your email is required';
+  messageRequired: string = 'Your message is required';
+  booleanNameRequired: boolean = false;
+  booleanEmailRequired: boolean = false;
+  booleanMessageRequired: boolean = false;
+  buttonClick: boolean = false;
   ngOnInit(): void {}
 
   async sendMail() {
@@ -22,23 +33,34 @@ export class FooterMessageAreaComponent implements OnInit {
     emailField.disabled = true;
     messageField.disabled = true;
     sendButton.disabled = true;
- 
-    //animation anzeigen für senden
-    let fd = new FormData();
-    fd.append('name',nameField.value);
-    fd.append('email',emailField.value);
-    fd.append('message',messageField.value);
 
+    this.nameTest.test(nameField.value)
+      ? (this.booleanNameRequired = true)
+      : (this.booleanNameRequired = false);
 
-    await fetch('https://sebastian-hass.developerakademie.net/send_mail/send_mail.php', {
-      method: 'POST',
-      body:fd
-    });
+    this.emailTest.test(emailField.value)
+      ? (this.booleanEmailRequired = true)
+      : (this.booleanEmailRequired = false);
 
-    // animation anzeigen für gesendet
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
+    this.messageTest.test(messageField.value)
+      ? (this.booleanMessageRequired = true)
+      : (this.booleanMessageRequired = false);
+
+    // //animation anzeigen für senden
+    // let fd = new FormData();
+    // fd.append('name',nameField.value);
+    // fd.append('email',emailField.value);
+    // fd.append('message',messageField.value);
+
+    // await fetch('https://sebastian-hass.developerakademie.net/send_mail/send_mail.php', {
+    //   method: 'POST',
+    //   body:fd
+    // });
+
+    // // animation anzeigen für gesendet
+    // nameField.disabled = false;
+    // emailField.disabled = false;
+    // messageField.disabled = false;
+    // sendButton.disabled = false;
   }
 }

@@ -16,7 +16,7 @@ export class HeaderComponent {
     const currentValue = this.service.getValue();
     this.service.setValue(!currentValue);
   }
-  selectRespoMenu(){
+  turnRespoMenu(){
     return this.service.getValue(); 
   }
 }
