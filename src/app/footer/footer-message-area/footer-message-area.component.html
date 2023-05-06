@@ -74,10 +74,14 @@
         booleanEmailRequired == 2 ||
         booleanMessageRequired == 2
           ? '4px solid red'
+          : booleanNameRequired == 1 ||
+            booleanEmailRequired == 1 ||
+            booleanMessageRequired == 1
+          ? '4px solid green'
           : ''
       "
       class="buttonHover"
-      (click)="sendMail()"
+      (click)="checkValueMail()"
     >
       Senden
     </div>

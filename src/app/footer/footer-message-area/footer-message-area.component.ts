@@ -24,7 +24,7 @@ export class FooterMessageAreaComponent implements OnInit {
 
   public autocompleteNameValue = Math.random().toString(36).substring(7);
 
-  async sendMail() {
+  checkValueMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
@@ -44,20 +44,35 @@ export class FooterMessageAreaComponent implements OnInit {
       ? (this.booleanMessageRequired = 1)
       : (this.booleanMessageRequired = 2);
 
-    // //animation anzeigen für senden
-    // let fd = new FormData();
-    // fd.append('name',nameField.value);
-    // fd.append('email',emailField.value);
-    // fd.append('message',messageField.value);
-
-    // await fetch('https://sebastian-hass.developerakademie.net/send_mail/send_mail.php', {
-    //   method: 'POST',
-    //   body:fd
-    // });
+    this.booleanNameRequired == 1 &&
+    this.booleanEmailRequired == 1 &&
+    this.booleanMessageRequired == 1
+      ? this.sendMail(nameField, emailField, messageField)
+      : '';
 
     // // animation anzeigen für gesendet
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
+  }
+
+  async sendMail(
+    nameField: HTMLInputElement,
+    emailField: HTMLInputElement,
+    messageField: HTMLInputElement
+  ) {
+    // //animation anzeigen für senden
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('email', emailField.value);
+    fd.append('message', messageField.value);
+
+    await fetch(
+      'https://sebastian-hass.developerakademie.net/send_mail/send_mail.php',
+      {
+        method: 'POST',
+        body: fd,
+      }
+    );
   }
 }
