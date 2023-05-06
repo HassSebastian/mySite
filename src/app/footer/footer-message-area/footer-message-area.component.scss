@@ -4,11 +4,11 @@
   z-index: 1;
   input {
     height: 50px;
-    // border: none;
+    border: none;
     border-bottom: 1px solid white;
     padding: 16px;
     color: white;
-    background-color: transparent;
+    background-color: black;
     &:hover {
       border: 3px solid white;
     }
@@ -33,7 +33,7 @@
     color: white;
     z-index: 1;
   }
-  .required{
+  .required {
     color: transparent;
   }
 }
@@ -43,5 +43,4 @@
   color: white;
   bottom: 0;
 }
-
 

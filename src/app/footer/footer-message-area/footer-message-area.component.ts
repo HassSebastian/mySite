@@ -8,43 +8,41 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class FooterMessageAreaComponent implements OnInit {
   nameTest = /^[a-zA-Zäöüß]{1,50}\s[a-zA-Zäöüß]{1,50}$/;
   emailTest = /\S+@\S+\.\S+/;
-  messageTest = /^[a-zA-Z0-9\s.,:;!?]*$/;
+  messageTest = /^[a-zA-Z0-9\s.,:;!?]+$/;
 
-  // @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
-  @ViewChild('sendButton') sendButton!: ElementRef;
   nameRequired: string = 'First and last name please';
   emailRequired: string = 'Your email is required';
   messageRequired: string = 'Your message is required';
-  booleanNameRequired: boolean = false;
-  booleanEmailRequired: boolean = false;
-  booleanMessageRequired: boolean = false;
-  buttonClick: boolean = false;
+  booleanNameRequired: number = 0;
+  booleanEmailRequired: number = 0;
+  booleanMessageRequired: number = 0;
+
   ngOnInit(): void {}
+
+  public autocompleteNameValue = Math.random().toString(36).substring(7);
 
   async sendMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
-    sendButton.disabled = true;
 
     this.nameTest.test(nameField.value)
-      ? (this.booleanNameRequired = true)
-      : (this.booleanNameRequired = false);
+      ? (this.booleanNameRequired = 1)
+      : (this.booleanNameRequired = 2);
 
     this.emailTest.test(emailField.value)
-      ? (this.booleanEmailRequired = true)
-      : (this.booleanEmailRequired = false);
+      ? (this.booleanEmailRequired = 1)
+      : (this.booleanEmailRequired = 2);
 
     this.messageTest.test(messageField.value)
-      ? (this.booleanMessageRequired = true)
-      : (this.booleanMessageRequired = false);
+      ? (this.booleanMessageRequired = 1)
+      : (this.booleanMessageRequired = 2);
 
     // //animation anzeigen für senden
     // let fd = new FormData();
@@ -58,9 +56,8 @@ export class FooterMessageAreaComponent implements OnInit {
     // });
 
     // // animation anzeigen für gesendet
-    // nameField.disabled = false;
-    // emailField.disabled = false;
-    // messageField.disabled = false;
-    // sendButton.disabled = false;
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
   }
 }

@@ -3,29 +3,83 @@
     <div class="w-100">
       <span class="">Your Name</span>
       <input
+        [style.border]="
+          booleanNameRequired == 1
+            ? '4px solid green'
+            : booleanNameRequired == 2
+            ? '4px solid red'
+            : ''
+        "
         class="w-100"
         type="text"
         name="name"
+        autocomplete="{{ autocompleteNameValue }}"
         placeholder="First and last name please"
         #nameField
       />
-      <div class="required">{{ nameRequired }}</div>
+      <div
+        [style.color]="booleanNameRequired == 2 ? 'red' : ''"
+        class="required"
+      >
+        {{ nameRequired }}
+      </div>
     </div>
     <div class="w-100">
       <span class="">Your Email</span>
-      <input class="w-100" type="email" name="email" #emailField />
-      <div class="required">{{ emailRequired }}</div>
+      <input
+        [style.border]="
+          booleanEmailRequired == 1
+            ? '4px solid green'
+            : booleanEmailRequired == 2
+            ? '4px solid red'
+            : ''
+        "
+        class="w-100"
+        type="email"
+        name="email"
+        #emailField
+      />
+      <div
+        [style.color]="booleanEmailRequired == 2 ? 'red' : ''"
+        class="required"
+      >
+        {{ emailRequired }}
+      </div>
     </div>
     <div class="w-100">
       <span>Your Message</span>
       <textarea
+        [style.border]="
+          booleanMessageRequired == 1
+            ? '4px solid green'
+            : booleanMessageRequired == 2
+            ? '4px solid red'
+            : ''
+        "
         class="w-100"
         type="text"
         name="message"
         #messageField
       ></textarea>
-      <div class="required">{{ messageRequired }}</div>
+      <div
+        [style.color]="booleanMessageRequired == 2 ? 'red' : ''"
+        class="required"
+      >
+        {{ messageRequired }}
+      </div>
     </div>
-    <div class="buttonHover" (click)="sendMail()" #sendButton>Senden</div>
+    <div
+      [style.border]="
+        booleanNameRequired == 2 ||
+        booleanEmailRequired == 2 ||
+        booleanMessageRequired == 2
+          ? '4px solid red'
+          : ''
+      "
+      class="buttonHover"
+      (click)="sendMail()"
+    >
+      Senden
+    </div>
   </div>
 </div>
