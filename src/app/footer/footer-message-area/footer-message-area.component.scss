@@ -12,6 +12,9 @@
     &:hover {
       border: 3px solid white;
     }
+    &::placeholder{
+      opacity: .3;
+    }
   }
   textarea {
     height: 150px;

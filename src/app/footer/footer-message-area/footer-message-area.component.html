@@ -1,7 +1,10 @@
 <div class="d-flex justify-content-center">
-  <div class="d-flex flex-column align-items-center messageBox">
+  <form
+    class="d-flex flex-column align-items-center messageBox"
+    (submit)="test()"
+  >
     <div class="w-100">
-      <span class="">Your Name</span>
+      <span>Your Name</span>
       <input
         [style.border]="
           booleanNameRequired == 1
@@ -10,10 +13,14 @@
             ? '4px solid red'
             : ''
         "
+        style="
+          -webkit-text-fill-color: white;
+          -webkit-box-shadow: 0 0 0px 1000px black inset;
+        "
         class="w-100"
         type="text"
         name="name"
-        autocomplete="{{ autocompleteNameValue }}"
+        required
         placeholder="First and last name please"
         #nameField
       />
@@ -25,7 +32,7 @@
       </div>
     </div>
     <div class="w-100">
-      <span class="">Your Email</span>
+      <span>Your Email</span>
       <input
         [style.border]="
           booleanEmailRequired == 1
@@ -35,8 +42,13 @@
             : ''
         "
         class="w-100"
-        type="email"
-        name="email"
+        style="
+          -webkit-text-fill-color: white;
+          -webkit-box-shadow: 0 0 0px 1000px black inset;
+        "
+        type="text"
+        name="name"
+        required
         #emailField
       />
       <div
@@ -85,5 +97,5 @@
     >
       Senden
     </div>
-  </div>
+  </form>
 </div>
