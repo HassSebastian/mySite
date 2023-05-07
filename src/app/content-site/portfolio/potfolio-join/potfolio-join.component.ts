@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./potfolio-join.component.scss']
 })
 export class PotfolioJoinComponent {
+  slide: boolean = false;
+
+  showDescription() {
+    this.slide = true;
+  }
+
+  hideDescription() {
+    this.slide = false;
+  }
 
 }

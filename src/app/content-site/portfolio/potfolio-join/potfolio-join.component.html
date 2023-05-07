@@ -1,14 +1,29 @@
-<div class="d-flex justify-content-between mb-5 mt-5">
-  <div class="w-50 border order-2">
-    <img
-      style="width: 100%; aspect-ratio: 1.6/1"
-      src="./assets/img/project/join.png"
-    />
-  </div>
-  <div
-    class="w-50 border text-start order-1"
-    style="font-family: 'Syne'; font-size: 48px; font-weight: 700"
-  >
-    01/04 Join
+<div (mouseenter)="showDescription()" (mouseleave)="hideDescription()">
+  <div class="position-relative d-flex justify-content-between w-100 mt-5 mb-5">
+    <div>
+      <span class="fontNumbers">03/04</span>
+      <div [style.opacity]="slide ? '1' : '0'" class="descriptionContainer">
+        <span class="fontHeadline">Join</span>
+        <span class="fontLanguage">JavaScript | HTML | CSS</span>
+        <span class="fontDescription"
+          >Task manager inspired by the Kanban System. Create and organize tasks
+          using drag and drop functions, assign users and categories.
+        </span>
+      </div>
+    </div>
+    <div class="w-50 imgContainer">
+      <img
+        [style.filter]="slide ? 'grayscale(0)' : 'grayscale(1)'"
+        src="./assets/img/project/join.png"
+      />
+    </div>
+    <div [style.opacity]="slide ? '1' : '0'" class="imgBorder"></div>
+    <div
+      [class.showDescription]="slide"
+      class="position-absolute bottom-0 d-flex mb-5 gap-5 buttonSlide"
+    >
+      <div class="buttonHover">GitHub</div>
+      <div class="buttonHover">Live</div>
+    </div>
   </div>
 </div>

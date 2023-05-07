@@ -1,30 +1,29 @@
-<div class="w-100">
-  <div
-    class="border text-start"
-    style="font-family: 'Syne'; font-size: 48px; font-weight: 700"
-  >
-    <span>03/04</span>
-  </div>
-
-  <div class="d-flex justify-content-end border">
-    <div class="descriptionContainer">
-      <span class="fontHeadline">El Pollo Loco</span>
-      <span class="fontLanguage">JavaScript | HTML | CSS</span>
-      <span class="fontDescription"
-        >Javascript-based and object-orientated jump & and run game. Help Pepe
-        save the village from El Pollo Loco!</span
-      >
-      <div class="d-flex gap-5">
-        <div class="buttonHover">GitHub</div>
-        <div class="buttonHover">Live</div>
+<div (mouseenter)="showDescription()" (mouseleave)="hideDescription()">
+  <div class="position-relative d-flex justify-content-between w-100 mt-5 mb-5">
+    <div>
+      <span class="fontNumbers">03/04</span>
+      <div [style.opacity]="slide ? '1' : '0'" class="descriptionContainer">
+        <span class="fontHeadline">El Pollo Loco</span>
+        <span class="fontLanguage">JavaScript | HTML | CSS</span>
+        <span class="fontDescription"
+          >Javascript-based and object-orientated jump & and run game. Help Pepe
+          save the village from El Pollo Loco!</span
+        >
       </div>
     </div>
-    <img
-      class="border"
-      style="top: 10px; width: 50%; aspect-ratio: 1.6/1"
-      src="./assets/img/project/elpollo.png"
-      (mouseenter)="showImage = true"
-      (mouseleave)="showImage = false"
-    />
+    <div class="w-50 imgContainer">
+      <img
+        [style.filter]="slide ? 'grayscale(0)' : 'grayscale(1)'"
+        src="./assets/img/project/elpollo.png"
+      />
+    </div>
+    <div [style.opacity]="slide ? '1' : '0'" class="imgBorder"></div>
+    <div
+      [class.showDescription]="slide"
+      class="position-absolute bottom-0 d-flex mb-5 gap-5 buttonSlide"
+    >
+      <div class="buttonHover">GitHub</div>
+      <div class="buttonHover">Live</div>
+    </div>
   </div>
 </div>
