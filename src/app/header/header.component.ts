@@ -19,4 +19,11 @@ export class HeaderComponent {
   turnRespoMenu(){
     return this.service.getValue(); 
   }
+
+  
+
+scrollTo(elementId: string): void {
+this.service.scrollTo(elementId);
+}
+
 }

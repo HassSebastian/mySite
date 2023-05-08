@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-headline',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./headline.component.scss']
 })
 export class HeadlineComponent {
+
+
+
+constructor(private service: ServiceService){}
+
+scrollTo(elementId: string): void {
+this.service.scrollTo(elementId);
+}
+
 
 }

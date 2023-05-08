@@ -1,17 +1,10 @@
-<div class="mt-5 mb-5">
+<div class="pt-5 pb-5">
   <div class="mb-5">
-    <span
-      class="fontHover"
-      style="font-family: 'Syne'; font-size: 78px; font-weight: 800"
-      >About me</span
-    >
+    <span class="fontHover fontAboutMe">About me</span>
   </div>
   <div class="d-flex justify-content-between mb-5">
-    <div class="d-flex flex-column align-items-center" style="width: 610px">
-      <span
-        class="mb-5"
-        style="font-family: 'Overpass'; font-weight: 400; font-size: 23px"
-      >
+    <div class="d-flex flex-column align-items-center descriptionBox">
+      <span class="mb-5 mt-5 fontDescription">
         I am a Front-end developer based in Munich, Germany. I enjoy helping
         designers and companies bring their ideas into real life. I am looking
         forward to continuing my developer career with a job in a junior web
@@ -19,7 +12,7 @@
         If you think I'd be a good match for your projects, contact me!
       </span>
       <div class="mt-5">
-        <div class="buttonHover">Let's talk</div>
+        <div class="buttonHover" (click)="scrollTo('email')">Let's talk</div>
       </div>
     </div>
     <div
@@ -27,19 +20,12 @@
       (mouseleave)="hideBorder()"
       class="position-relative"
     >
-      <img style="height: 533px" src="assets/img/myPicture.jpg" />
+      <img src="assets/img/myPicture.jpg" />
       <div
+        class="boxborder"
         *ngIf="showHover"
         (mouseenter)="showBorder()"
         (mouseleave)="hideBorder()"
-        style="
-          position: absolute;
-          top: 20px;
-          left: 20px;
-          width: 800px;
-          height: 533px;
-          border: 4px solid black;
-        "
       ></div>
     </div>
   </div>

@@ -24,7 +24,6 @@ export class FooterMessageAreaComponent implements OnInit {
 
   public autocompleteNameValue = Math.random().toString(36).substring(7);
 
-  test() {}
 
   checkValueMail() {
     let nameField = this.nameField.nativeElement;

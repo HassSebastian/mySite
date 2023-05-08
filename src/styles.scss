@@ -45,6 +45,7 @@ body {
   margin: 0;
   user-select: none;
   background-color: #fffcf3;
+  scroll-behavior: smooth;
 }
 
 .fontHover{
@@ -86,10 +87,13 @@ body {
   font-family: 'Overpass';
   font-weight: 400;
   font-size: 23px;
+  color: black;
+  text-decoration: none;
 
   &:hover {
     cursor: pointer;
     font-weight: 900 !important;
+    color: black;
     animation: hoverButton 100ms ease-out forwards;
   }
 }

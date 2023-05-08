@@ -1,0 +1,16 @@
+.emailField {
+  position: absolute;
+  left: -110px;
+  rotate: 270deg;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  font-size: 23px;
+  font-family: "Overpass";
+  font-weight: 400;
+  transition: 200ms ease;
+  &:hover{
+    transition: 200ms ease;
+    transform: scale(1.2);
+  }
+}

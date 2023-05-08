@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServiceService } from 'src/app/service.service';
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
@@ -12,5 +13,11 @@ export class AboutMeComponent {
   }
   hideBorder() {
     this.showHover = false;
+  }
+
+  constructor(private service: ServiceService) {}
+
+  scrollTo(elementId: string): void {
+    this.service.scrollTo(elementId);
   }
 }

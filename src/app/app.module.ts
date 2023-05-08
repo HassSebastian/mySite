@@ -23,7 +23,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioRofComponent } from './content-site/portfolio/portfolio-rof/portfolio-rof.component';
 import { FormsModule } from '@angular/forms';
-import { ResponsiveMenuComponent } from './responsive-menu/responsive-menu.component';
+import { ResponsiveMenuComponent } from './header/responsive-menu/responsive-menu.component';
 import { ServiceService } from './service.service';
 
 @NgModule({

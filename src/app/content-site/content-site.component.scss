@@ -1,5 +1,8 @@
 .contentBox{
-    margin: 0 100px;
-    padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+    margin: 0 150px;
+    padding-top: 150px;
   }
   

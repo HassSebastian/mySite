@@ -1,8 +1,6 @@
-<div
-  class="position-absolute bottom-0 start-0 end-0 d-flex justify-content-between mb-5 contentBox text-white"
->
+<div class="d-flex justify-content-between text-white" style="margin: 0 150px">
   <div class="d-flex flex-column justify-content-between gap-3">
-    <div>
+    <div (click)="scrollTo('headline')">
       <img class="logoAnimation" src="./assets/img/meinlogo-white.png" />
     </div>
     <div style="font-family: 'Poppins'; font-size: 23px; font-weight: normal">
@@ -10,8 +8,21 @@
     </div>
   </div>
   <div class="d-flex align-items-center gap-5">
-    <div class="imgHover"><img src="./assets/img/github.png" /></div>
+    <a class="imgHover" href="https://github.com/HassSebastian" target="_blank"
+      ><img src="./assets/img/github.png"
+    /></a>
     <div class="imgHover"><img src="./assets/img/email.png" /></div>
-    <div class="imgHover"><img src="./assets/img/linkedin.png" /></div>
+    <!-- <a
+      class="imgHover"
+      href="https://linkedin.com/in/sebastian-haß-895819275"
+      target="_blank"
+      ><img src="./assets/img/linkedin.png"
+    /></a> -->
+    <a
+      class="imgHover"
+      href="https://linkedin.com/in/sebastian-haß-895819275"
+      target="_blank"
+      ><img src="./assets/img/linkedin.png"
+    /></a>
   </div>
 </div>
