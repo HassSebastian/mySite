@@ -1,8 +1,74 @@
-.respoMenuFont {
-  font-family: "Syne";
-  font-size: 96px;
-  font-weight: 700;
-  font-style: normal;
+.respoMenuStyle {
+  position: fixed;
+  top: 92px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fffcf3;
+  z-index: 3;
+  transition: all 300ms;
+  animation: respoOpenAnimation 500ms forwards;
+}
+
+.menuStyle {
+  height: 90px;
+  margin: 32px 0;
+  cursor: pointer;
+
+  .respoMenuFont {
+    font-family: "Syne";
+    font-size: 96px;
+    font-weight: 700;
+    font-style: normal;
+  }
+  div {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 39px;
+    height: 52px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+  }
+  &:hover {
+    div {
+      animation-name: hover;
+      animation-duration: 0.5s;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes hover {
+  0% {
+    left: 0;
+    bottom: 0;
+    width: 39px;
+    height: 52px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+  }
+  25% {
+    width: 39px;
+    height: 0;
+    border-bottom: 3px solid black;
+  }
+  50% {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    border-bottom: 3px solid black;
+  }
+  75% {
+  }
+  100% {
+    left: 340px;
+    width: 200px;
+    height: 0;
+    border-bottom: 3px solid black;
+  }
 }
 
 @keyframes respoOpenAnimation {
@@ -12,4 +78,12 @@
   to {
     top: 92px;
   }
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 200px solid #fffcf3;
+  border-bottom: 0 solid transparent;
+  border-left: 150vw solid transparent;
 }

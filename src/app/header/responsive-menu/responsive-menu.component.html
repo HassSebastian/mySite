@@ -1,33 +1,55 @@
-<div *ngIf="respoMenu()"
-  style="
-    position: absolute;
-    top: 92px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fffcf3;
-    z-index: 3;
-    transition: all 300ms ease-in-out;
-    animation: respoOpenAnimation 300ms infinite;
-  "
+<div
+  *ngIf="respoMenu()"
+  class="respoMenuStyle"
 >
-  <div class="d-flex justify-content-center border">
+  <div class="d-flex justify-content-center">
     <div
-      class="d-flex flex-column align-items-center border mt-1 gap-2"
+      class="d-flex flex-column align-items-center mt-4"
       style="width: 540px"
     >
-      <div class="text-center border w-100">
+      <div
+        (click)="scrollTo('aboutMe')"
+        class="position-relative d-flex align-items-center justify-content-center w-100 menuStyle"
+      >
         <span class="respoMenuFont">About me</span>
+        <div></div>
       </div>
-      <div class="text-center border w-100">
+      <div
+        (click)="scrollTo('mySkills')"
+        class="position-relative d-flex align-items-center justify-content-center text-center w-100 menuStyle"
+      >
         <span class="respoMenuFont">My skills</span>
+        <div></div>
       </div>
-      <div class="text-center border w-100">
+      <div
+        (click)="scrollTo('portfolio')"
+        class="position-relative d-flex align-items-center justify-content-center text-center w-100 menuStyle"
+      >
         <span class="respoMenuFont">Portfolio</span>
-      </div>
-      <div class="text-center border w-100">
-        <span class="respoMenuFont">Message</span>
+        <div></div>
       </div>
     </div>
+  </div>
+  <div class="position-absolute bottom-0 w-100" style="height: 350px">
+    <div class="position-absolute bottom-0 bg-black h-100 w-100">
+      <span
+        class="fontHover"
+        style="
+          position: absolute;
+          top: 80px;
+          font-family: 'Syne';
+          font-size: 78px;
+          font-weight: 900;
+          color: white;
+          margin: 0 150px;
+          z-index: 1;
+        "
+        >Say Hi!</span
+      >
+      <div class="position-absolute bottom-0 mb-3 w-100">
+        <app-footer-legal-notice></app-footer-legal-notice>
+      </div>
+    </div>
+    <div class="position-absolute triangle"></div>
   </div>
 </div>

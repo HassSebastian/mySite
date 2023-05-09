@@ -18,11 +18,11 @@ export class ServiceService {
     return this.showMenu.getValue();
   }
 
-
   scrollTo(elementId: string): void {
     const element = document.getElementById(elementId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+      this.showMenu.next(false);
     }
   }
 
