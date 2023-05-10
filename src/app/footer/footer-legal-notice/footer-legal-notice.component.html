@@ -7,16 +7,24 @@
       &#64; Sebastian Haß 2023
     </div>
   </div>
-  <div class="d-flex align-items-center gap-5">
-    <a class="imgHover" href="https://github.com/HassSebastian" target="_blank"
-      ><img src="./assets/img/github.png"
-    /></a>
-    <div (click)="scrollTo('email')" class="imgHover"><img src="./assets/img/email.png" /></div>
-    <a
-      class="imgHover"
-      href="https://linkedin.com/in/sebastian-haß-895819275"
-      target="_blank"
-      ><img src="./assets/img/linkedin.png"
-    /></a>
+  <div class="d-flex flex-column align-items-center">
+    <div class="d-flex align-items-center gap-5">
+      <a
+        class="imgHover"
+        href="https://github.com/HassSebastian"
+        target="_blank"
+        ><img src="./assets/img/github.png"
+      /></a>
+      <div (click)="scrollTo('email')" class="imgHover">
+        <img src="./assets/img/email.png" />
+      </div>
+      <a
+        class="imgHover"
+        href="https://linkedin.com/in/sebastian-haß-895819275"
+        target="_blank"
+        ><img src="./assets/img/linkedin.png"
+      /></a>
+    </div>
+    <span (click)="showLN()" class="LegalNotice">Legal notice</span>
   </div>
 </div>

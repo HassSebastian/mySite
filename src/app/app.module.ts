@@ -25,6 +25,7 @@ import { PortfolioRofComponent } from './content-site/portfolio/portfolio-rof/po
 import { FormsModule } from '@angular/forms';
 import { ResponsiveMenuComponent } from './header/responsive-menu/responsive-menu.component';
 import { ServiceService } from './service.service';
+import { LegalNoticeComponent } from './footer/footer-legal-notice/legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ServiceService } from './service.service';
     FooterMessageAreaComponent,
     PortfolioRofComponent,
     ResponsiveMenuComponent,
+    LegalNoticeComponent,
   ],
   imports: [
     BrowserModule,

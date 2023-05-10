@@ -2,13 +2,13 @@
   position: absolute;
   top: 20px;
   left: -20px;
-  width: 800px;
-  height: 533px;
+  width: 40vw;
+  height: 50vh;
   border: 4px solid black;
 }
 
 .descriptionBox{
-  width: 610px;
+  width: 40%;
 }
 
 .fontDescription {
@@ -19,10 +19,10 @@
 
 .fontAboutMe {
   font-family: "Syne";
-  font-size: 78px;
+  font-size: 4vw;
   font-weight: 800;
 }
 
 img {
-  height: 533px;
+  width: 40vw;
 }
