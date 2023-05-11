@@ -72,8 +72,9 @@
   background-color: #fffcf3;
   z-index: 1;
   img {
-    height: 500px;
-    width: -webkit-fill-available;
+    width: 500px;
+    aspect-ratio: 1.26/1;
+    // width: -webkit-fill-available;
   }
 }
 .imgBorderRight {

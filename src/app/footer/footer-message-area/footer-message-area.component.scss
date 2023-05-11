@@ -12,8 +12,8 @@
     &:hover {
       border: 3px solid white;
     }
-    &::placeholder{
-      opacity: .3;
+    &::placeholder {
+      opacity: 0.3;
     }
   }
   textarea {
@@ -47,3 +47,19 @@
   bottom: 0;
 }
 
+.hoverBlink {
+  animation: blink 1s linear infinite;
+  color: red;
+  }
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
