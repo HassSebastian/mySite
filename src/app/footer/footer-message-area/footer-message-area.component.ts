@@ -10,6 +10,9 @@ export class FooterMessageAreaComponent implements OnInit {
   emailTest = /\S+@\S+\.\S+/;
   messageTest = /^[a-zA-Z0-9\s.,:;!?]+$/;
 
+  sendMessage: string = 'Message sending';
+  messageChanged: boolean = false;
+
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
@@ -23,7 +26,6 @@ export class FooterMessageAreaComponent implements OnInit {
   ngOnInit(): void {}
 
   public autocompleteNameValue = Math.random().toString(36).substring(7);
-
 
   checkValueMail() {
     let nameField = this.nameField.nativeElement;
@@ -45,16 +47,24 @@ export class FooterMessageAreaComponent implements OnInit {
       ? (this.booleanMessageRequired = 1)
       : (this.booleanMessageRequired = 2);
 
-    this.booleanNameRequired == 1 &&
-    this.booleanEmailRequired == 1 &&
-    this.booleanMessageRequired == 1
-      ? this.sendMail(nameField, emailField, messageField)
-      : '';
+    if (this.messageValueChanged()) {
+      this.messageChanged = true;
+      setTimeout(() => {
+        this.sendMail(nameField, emailField, messageField);
+      }, 3000);
+    }
 
-    // // animation anzeigen für gesendet
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
+  }
+
+  messageValueChanged() {
+    return (
+      this.booleanNameRequired == 1 &&
+      this.booleanEmailRequired == 1 &&
+      this.booleanMessageRequired == 1
+    );
   }
 
   async sendMail(
@@ -62,18 +72,26 @@ export class FooterMessageAreaComponent implements OnInit {
     emailField: HTMLInputElement,
     messageField: HTMLInputElement
   ) {
-    // //animation anzeigen für senden
-    let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('email', emailField.value);
-    fd.append('message', messageField.value);
+    this.sendMessage = 'thanks for message :-)';
+    setTimeout(() => {
+      this.messageChanged = false;
+      nameField.value = '';
+      emailField.value = '';
+      messageField.value = '';
+    }, 3000);
 
-    await fetch(
-      'https://sebastian-hass.developerakademie.net/send_mail/send_mail.php',
-      {
-        method: 'POST',
-        body: fd,
-      }
-    );
+    // //animation anzeigen für senden
+    // let fd = new FormData();
+    // fd.append('name', nameField.value);
+    // fd.append('email', emailField.value);
+    // fd.append('message', messageField.value);
+
+    // await fetch(
+    //   'https://sebastian-hass.developerakademie.net/send_mail/send_mail.php',
+    //   {
+    //     method: 'POST',
+    //     body: fd,
+    //   }
+    // );
   }
 }

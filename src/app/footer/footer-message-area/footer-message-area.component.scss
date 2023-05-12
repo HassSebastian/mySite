@@ -47,9 +47,8 @@
   bottom: 0;
 }
 
-.hoverBlink {
+.messageBlink {
   animation: blink 1s linear infinite;
-  color: red;
   }
 
 @keyframes blink {
