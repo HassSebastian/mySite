@@ -10,7 +10,7 @@
   justify-content: flex-end;
   width: 95%;
   height: auto;
-  gap: 16px;
+  gap: 20px;
   padding-bottom: 30px;
   transition: 300ms;
 }
@@ -23,7 +23,7 @@
 }
 .fontHeadline {
   font-family: "Syne";
-  font-size: 4vw;
+  font-size: 3vw;
   font-weight: 800;
   font-style: normal;
   line-height: normal;
@@ -83,9 +83,9 @@
   background-color: #fffcf3;
   z-index: 1;
   img {
-    width: 600px;
-    // height: 375px;
-    aspect-ratio: 1.766/1;
+    max-width: 300px;
+    aspect-ratio: 1.255/1;
+    margin: 100px 0;
   }
 }
 .imgBorderRight {
@@ -156,3 +156,14 @@
   }
 }
 
+@media(max-width: 1100px){
+  .imgContainer {
+    img {
+      margin: 60px 0 !important;
+    }
+  }
+}
+
+@media(max-width: 880px) {
+
+}

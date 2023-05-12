@@ -34,3 +34,15 @@
     }
   }
 }
+
+.skillBox {
+  border: 3px solid black;
+  gap: 128px;
+  padding: 160px;
+}
+
+@media (max-width: 1000px) {
+  .skillBox {
+    padding: 100px;
+  }
+}

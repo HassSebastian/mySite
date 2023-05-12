@@ -75,6 +75,8 @@ export class FooterMessageAreaComponent implements OnInit {
     this.sendMessage = 'thanks for message :-)';
     setTimeout(() => {
       this.messageChanged = false;
+      this.sendMessage = 'Message sending';
+
       nameField.value = '';
       emailField.value = '';
       messageField.value = '';

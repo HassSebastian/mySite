@@ -1,3 +1,10 @@
+header {
+  height: 92px;
+  padding: 0 100px;
+  background-color: #fffcf3;
+  z-index: 3;
+}
+
 .hamburger-button {
   width: 50px;
   height: 50px;
@@ -21,3 +28,9 @@
   transform: rotate(-90deg);
 }
 
+
+@media (max-width: 1000px) {
+  header {
+    padding: 0 50px;
+  }
+}
