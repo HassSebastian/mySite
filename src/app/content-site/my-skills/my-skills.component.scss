@@ -72,3 +72,17 @@
   
   }
 }
+
+@media(max-width: 620px ){
+  .skillBox {
+
+    padding: 50px 10px;
+    gap:20px;
+  }
+  .fontHeadline{
+    top: 23px;
+    left: calc(50% - (228px / 2));
+    font-size: 30px;
+  }
+
+}

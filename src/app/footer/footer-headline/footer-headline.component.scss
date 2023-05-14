@@ -1,10 +1,46 @@
+.headlineContainer{
+  position: relative;
+}
 .headline{
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: -135px;
     font-family: 'Syne';
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: 900;
     color: white;
 }
 
-  
+.box1{
+      font-family: 'Overpass';
+    font-size: 32px;
+    font-weight: 500;
+    color: #ff9900;
+
+}
+ .box2{
+      font-family: 'Overpass';
+    font-size: 23px;
+    font-weight: 400;
+
+ }
+
+
+  @media(max-width:700px){
+    .headlineContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .box1{
+      width: 75% !important;
+font-size: 5.2vw;
+    } 
+    .box2{
+      width: 75% !important;
+      font-size: 3.5vw;
+    }
+    .headline{
+      display: none;
+    }
+  }

@@ -223,6 +223,7 @@
   }
   .descriptionContainer {
     margin-bottom: 30px;
+    text-align: center !important;
   }
   .buttonSlideRight {
     width: 282px;
@@ -231,5 +232,23 @@
   .buttonSlideLeft {
     width: 282px;
     left: calc(50% - (282px / 2)) !important;
+  }
+  .fontHeadline {
+    font-size: 32px;
+  }
+  .descriptionContainerBox {
+    width: 95% !important;
+  }
+}
+@media (max-width: 490px) {
+  .imgContainer {
+    img {
+      width: 95%;
+    }
+    width: 90% !important;
+  }
+  .gap-5{
+    gap: 1rem !important;
+    justify-content: center;
   }
 }

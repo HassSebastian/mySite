@@ -37,17 +37,23 @@ img {
   .fontDescription {
     text-align: center;
   }
-  .descriptionBox{
+  .descriptionBox {
     width: 80%;
   }
-  .fontAboutMe{
+  .fontAboutMe {
     font-size: 35px;
   }
-  .fontDescription{
+  .fontDescription {
     font-size: 17px;
   }
-  img{
+  img {
     width: 60vw;
     margin-top: 32px;
+  }
+}
+
+@media (max-width: 880px) {
+  .boxborder{
+    width: 60vw;
   }
 }
