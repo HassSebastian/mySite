@@ -9,8 +9,37 @@
   font-family: "Overpass";
   font-weight: 400;
   transition: 200ms ease;
-  &:hover{
+  &:hover {
     transition: 200ms ease;
     transform: scale(1.2);
+  }
+}
+
+.fontHeadline {
+  span {
+    font-size: 8vw;
+    font-weight: 800;
+    font-family: "Syne";
+  }
+}
+
+.headlineUnderline {
+  width: 50%;
+  height: 3px;
+}
+
+.fontName {
+  font-size: 3vw;
+  font-family: "Overpass";
+  font-weight: 800;
+  color: #ff9900;
+}
+
+@media (max-width: 840px) {
+  .emailField {
+    left: calc(50% - (241px / 2));
+    top: 108%;
+    rotate: 0deg;
+    text-decoration: underline;
   }
 }

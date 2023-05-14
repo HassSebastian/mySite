@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { ServiceService } from 'src/app/service.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { ServiceService } from 'src/app/service.service';
   styleUrls: ['./footer-legal-notice.component.scss'],
 })
 export class FooterLegalNoticeComponent {
+  showLegalNotice:boolean = false;
 
 
 
@@ -18,6 +19,9 @@ export class FooterLegalNoticeComponent {
   }
 
   showLN(){
-    alert('verknüpfung fehlt noch');
+    this.showLegalNotice = true;
+  }
+  hideLN(){
+    this.showLegalNotice = false;
   }
 }

@@ -1,4 +1,4 @@
-.portfolioContainer{
+.portfolioContainer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -156,7 +156,7 @@
   }
 }
 
-@media(max-width: 1100px){
+@media (max-width: 1100px) {
   .imgContainer {
     img {
       margin: 60px 0 !important;
@@ -164,6 +164,72 @@
   }
 }
 
-@media(max-width: 880px) {
+@media (max-width: 880px) {
+  .mediaBox {
+    flex-direction: column;
+    align-items: center;
+  }
+  .descriptionContainer {
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .fontDescription {
+    text-align: center;
+  }
+  .fontNumbers {
+    display: none;
+  }
+  .buttonSlideRight {
+    right: 31% !important;
+    bottom: -10px !important;
+    z-index: 2;
+  }
+  .buttonSlideLeft {
+    left: 31% !important;
+    bottom: -10px !important;
+    z-index: 2;
+  }
+  .imgBorderRight {
+    left: calc(50% - (50% / 2));
+    bottom: -20px;
+  }
+  .imgBorderLeft {
+    right: calc(50% - (50% / 2));
+    bottom: -20px;
+  }
+  .order2 {
+    order: 2;
+  }
+  .order3 {
+    order: 3;
+  }
+  .arrow {
+    right: calc(25% - 21px);
+  }
+}
 
+@media (max-width: 840px) {
+  .imgBorderLeft {
+    width: 100%;
+    right: 0;
+  }
+  .imgBorderRight {
+    width: 100%;
+    left: 0;
+  }
+  .arrow {
+    display: none;
+  }
+  .descriptionContainer {
+    margin-bottom: 30px;
+  }
+  .buttonSlideRight {
+    width: 282px;
+    right: calc(50% - (282px / 2)) !important;
+  }
+  .buttonSlideLeft {
+    width: 282px;
+    left: calc(50% - (282px / 2)) !important;
+  }
 }

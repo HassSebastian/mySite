@@ -6,6 +6,16 @@
   height: 104px;
 }
 
+.fontHeadline{
+  top: 50px;
+  left: calc(50% - (541px / 2));
+  width: fit-content;
+  font-family: 'Syne';
+  font-size: 78px;
+  font-weight: 900;
+  background-color: #fffcf3;
+}
+
 .font {
   font-family: "Overpass";
   font-size: 16px;
@@ -44,5 +54,21 @@
 @media (max-width: 1000px) {
   .skillBox {
     padding: 100px;
+  }
+}
+@media (max-width: 878px) {
+  .skillBox {
+    padding: 50px;
+    gap: 50px;
+  }
+  .fontHeadline{
+    top: 35px;
+    left: calc(50% - (358px / 2));
+    font-size: 50px;
+  }
+  .itemStyle{
+    width: 55px;
+    height: 56px;
+  
   }
 }

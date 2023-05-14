@@ -7,7 +7,7 @@
   border: 4px solid black;
 }
 
-.descriptionBox{
+.descriptionBox {
   width: 45%;
 }
 
@@ -26,4 +26,28 @@
 
 img {
   width: 40vw;
+}
+
+@media (max-width: 880px) {
+  .aboutMeDescriptionContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMeContainer,
+  .fontDescription {
+    text-align: center;
+  }
+  .descriptionBox{
+    width: 80%;
+  }
+  .fontAboutMe{
+    font-size: 35px;
+  }
+  .fontDescription{
+    font-size: 17px;
+  }
+  img{
+    width: 60vw;
+    margin-top: 32px;
+  }
 }
