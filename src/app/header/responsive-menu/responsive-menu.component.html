@@ -1,29 +1,23 @@
-<div
-  *ngIf="respoMenu()"
-  class="respoMenuStyle"
->
-  <div class="d-flex justify-content-center">
-    <div
-      class="d-flex flex-column align-items-center gap-4"
-      style="width: 35%"
-    >
+<div *ngIf="respoMenu()" class="d-flex justify-content-center respoMenuStyle">
+  <div class="d-flex justify-content-center w-50 h-50">
+    <div class="d-flex flex-column justify-content-around align-items-center ">
       <div
         (click)="scrollTo('aboutMe')"
-        class="position-relative d-flex align-items-center justify-content-center w-100 menuStyle"
+        class="position-relative d-flex align-items-center justify-content-center menuStyle w-100 ps-5 pe-5"
       >
         <span class="respoMenuFont">About me</span>
         <div></div>
       </div>
       <div
         (click)="scrollTo('mySkills')"
-        class="position-relative d-flex align-items-center justify-content-center text-center w-100 menuStyle"
+        class="position-relative d-flex align-items-center justify-content-center menuStyle w-100 m-3"
       >
         <span class="respoMenuFont">My skills</span>
         <div></div>
       </div>
       <div
         (click)="scrollTo('portfolio')"
-        class="position-relative d-flex align-items-center justify-content-center text-center w-100 menuStyle"
+        class="position-relative d-flex align-items-center justify-content-center menuStyle w-100 m-3"
       >
         <span class="respoMenuFont">Portfolio</span>
         <div></div>

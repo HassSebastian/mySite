@@ -247,8 +247,14 @@
     }
     width: 90% !important;
   }
-  .gap-5{
+  .gap-5 {
     gap: 1rem !important;
     justify-content: center;
+  }
+  .imgBorderLeft,
+  .imgBorderRight {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
   }
 }

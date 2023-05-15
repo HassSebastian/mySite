@@ -82,18 +82,17 @@ export class FooterMessageAreaComponent implements OnInit {
       messageField.value = '';
     }, 3000);
 
-    // //animation anzeigen für senden
-    // let fd = new FormData();
-    // fd.append('name', nameField.value);
-    // fd.append('email', emailField.value);
-    // fd.append('message', messageField.value);
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('email', emailField.value);
+    fd.append('message', messageField.value);
 
-    // await fetch(
-    //   'https://sebastian-hass.developerakademie.net/send_mail/send_mail.php',
-    //   {
-    //     method: 'POST',
-    //     body: fd,
-    //   }
-    // );
+    await fetch(
+      'https://sebastian-hass.developerakademie.net/send_mail/send_mail.php',
+      {
+        method: 'POST',
+        body: fd,
+      }
+    );
   }
 }

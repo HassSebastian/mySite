@@ -11,22 +11,21 @@
 }
 
 .menuStyle {
-  height: 90px;
-  // margin: 32px 0;
+  height: max-content;
   cursor: pointer;
 
   .respoMenuFont {
     font-family: "Syne";
-    font-size: 6vw;
+    font-size: 93px;
     font-weight: 700;
     font-style: normal;
   }
   div {
     position: absolute;
     left: 0;
-    bottom: 0;
-    width: 39px;
-    height: 52px;
+    bottom: 0px;
+    width: 7%;
+    height: 50%;
     border-left: 3px solid black;
     border-bottom: 3px solid black;
   }
@@ -42,32 +41,21 @@
 
 @keyframes hover {
   0% {
-    left: 0;
-    bottom: 0;
-    width: 39px;
-    height: 52px;
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
+    width: 7%;
+    height: 50%;
   }
   25% {
-    width: 39px;
     height: 0;
-    border-bottom: 3px solid black;
   }
   50% {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    border-bottom: 3px solid black;
   }
   75% {
+    left: 60%;
   }
   100% {
-    left: 340px;
-    width: 200px;
     height: 0;
-    border-bottom: 3px solid black;
+    left: 60%;
+    width: 40%;
   }
 }
 
@@ -87,3 +75,33 @@
   border-bottom: 0 solid transparent;
   border-left: 150vw solid transparent;
 }
+
+@media (max-width: 1220px) {
+  .menuStyle {
+    .respoMenuFont {
+      font-size: 73px;
+    }
+  }
+}
+
+
+@media (max-width: 1005px) {
+  .menuStyle {
+    padding: 0 24px !important;
+    .respoMenuFont {
+      font-size: 53px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .menuStyle {
+    padding: 0 12px !important;
+
+    .respoMenuFont {
+      font-size: 33px;
+    }
+  }
+}
+
+

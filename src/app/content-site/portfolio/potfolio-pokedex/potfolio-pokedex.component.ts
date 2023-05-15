@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class PotfolioPokedexComponent {
   slide: boolean = false;
 
+
   showDescription() {
     this.slide = true;
   }
