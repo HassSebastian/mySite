@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
 export class PotfolioPokedexComponent {
   slide: boolean = false;
 
+  onInit(): void {
+    window.innerWidth < 880 ? this.slide = true : this.slide = false;
+  }
 
   showDescription() {
     this.slide = true;

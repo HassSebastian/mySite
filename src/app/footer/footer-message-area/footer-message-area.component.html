@@ -12,10 +12,6 @@
             ? '4px solid red'
             : ''
         "
-        style="
-          -webkit-text-fill-color: white;
-          -webkit-box-shadow: 0 0 0px 1000px black inset;
-        "
         class="w-100"
         type="text"
         name="name"
@@ -41,10 +37,6 @@
             : ''
         "
         class="w-100"
-        style="
-          -webkit-text-fill-color: white;
-          -webkit-box-shadow: 0 0 0px 1000px black inset;
-        "
         type="text"
         name="name"
         required
@@ -98,20 +90,10 @@
     </div>
     <div
       *ngIf="messageChanged"
-      class="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center"
-      style="background-color: rgba(255, 255, 255, 0.3); z-index: 1;"
+      class="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center sending-overlay"
     >
       <span
         class="text-center messageBlink"
-        style="
-        top: 10%;
-          font-family: 'Syne';
-          font-weight: 900;
-          font-size: 4vw;
-          line-height: normal;
-          background-color: transparent;
-          color: #ff9900;
-        "
         >{{ sendMessage }}</span
       >
     </div>

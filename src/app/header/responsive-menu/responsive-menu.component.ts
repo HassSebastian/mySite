@@ -9,13 +9,11 @@ import { ServiceService } from '../../service.service';
 export class ResponsiveMenuComponent {
   constructor(private service: ServiceService) {}
 
-  respoMenu() {  
+  respoMenu() {
     return this.service.getValue();
   }
-
 
   scrollTo(elementId: string): void {
     this.service.scrollTo(elementId);
   }
-
 }

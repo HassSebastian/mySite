@@ -6,7 +6,7 @@ import { FooterMessageAreaComponent } from './footer/footer-message-area/footer-
 
 const routes: Routes = [
   { path: '', component: AppComponent },
-  { path: 'email', component: FooterMessageAreaComponent}
+  { path: 'email', component: FooterMessageAreaComponent },
 ];
 
 @NgModule({

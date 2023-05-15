@@ -7,8 +7,7 @@ import { ServiceService } from '../service.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-
-  constructor(public service: ServiceService){}
+  constructor(public service: ServiceService) {}
 
   ngOnInit(): void {}
 
@@ -16,14 +15,11 @@ export class HeaderComponent {
     const currentValue = this.service.getValue();
     this.service.setValue(!currentValue);
   }
-  turnRespoMenu(){
-    return this.service.getValue(); 
+  turnRespoMenu() {
+    return this.service.getValue();
   }
 
-  
-
-scrollTo(elementId: string): void {
-this.service.scrollTo(elementId);
-}
-
+  scrollTo(elementId: string): void {
+    this.service.scrollTo(elementId);
+  }
 }
