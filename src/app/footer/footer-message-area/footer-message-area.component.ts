@@ -88,7 +88,7 @@ export class FooterMessageAreaComponent implements OnInit {
     fd.append('message', messageField.value);
 
     await fetch(
-      'https://sebastian-hass.developerakademie.net/send_mail/send_mail.php',
+      'https://sebastian-hass.de/assets/email-send/send_mail.php',
       {
         method: 'POST',
         body: fd,
