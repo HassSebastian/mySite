@@ -25,8 +25,6 @@ export class FooterMessageAreaComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public autocompleteNameValue = Math.random().toString(36).substring(7);
-
   checkValueMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
@@ -87,12 +85,9 @@ export class FooterMessageAreaComponent implements OnInit {
     fd.append('email', emailField.value);
     fd.append('message', messageField.value);
 
-    await fetch(
-      'https://sebastian-hass.de/assets/email-send/send_mail.php',
-      {
-        method: 'POST',
-        body: fd,
-      }
-    );
+    await fetch('https://sebastian-hass.de/assets/email-send/send_mail.php', {
+      method: 'POST',
+      body: fd,
+    });
   }
 }
