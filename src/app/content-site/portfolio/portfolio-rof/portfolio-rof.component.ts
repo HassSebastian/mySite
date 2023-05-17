@@ -1,21 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio-rof',
   templateUrl: './portfolio-rof.component.html',
-  styleUrls: ['./portfolio-rof.component.scss', '../portfolio.component.scss']
+  styleUrls: ['./portfolio-rof.component.scss', '../portfolio.component.scss'],
 })
 export class PortfolioRofComponent {
-
   slide: boolean = false;
+  @HostListener('window:resize', ['$event'])
+  onWindowResize(event: Event) {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 880) {
+      this.slide = true;
+    } else {
+      this.slide = false;
+    }
+  }
 
   showDescription() {
     this.slide = true;
   }
 
   hideDescription() {
-    window.innerWidth < 880 ? this.slide = true : this.slide = false;
+    this.slide = false;
   }
-
-  
 }

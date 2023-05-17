@@ -4,7 +4,7 @@
   >
     <div class="w-100">
       <span>Your Name</span>
-      <input
+      <!-- <input
         [style.border]="
           booleanNameRequired == 1
             ? '4px solid green'
@@ -18,6 +18,21 @@
         required
         placeholder="First and last name please"
         #nameField
+      /> -->
+      <input
+        [style.border]="
+          booleanNameRequired == 1
+            ? '4px solid green'
+            : booleanNameRequired == 2
+            ? '4px solid red'
+            : ''
+        "
+        class="w-100"
+        type="text"
+        name="name"
+        required
+        placeholder="First and last name please"
+        (keydown)="handleKeyPressName($event)"
       />
       <div
         [style.color]="booleanNameRequired == 2 ? 'red' : ''"
@@ -37,10 +52,10 @@
             : ''
         "
         class="w-100"
-        type="text"
-        name="name"
+        type="email"
+        name="email"
         required
-        #emailField
+        (keydown)="handleKeyPressEmail($event)"
       />
       <div
         [style.color]="booleanEmailRequired == 2 ? 'red' : ''"
@@ -62,7 +77,7 @@
         class="w-100"
         type="text"
         name="message"
-        #messageField
+        (keydown)="handleKeyPressMessage($event)"
       ></textarea>
       <div
         [style.color]="booleanMessageRequired == 2 ? 'red' : ''"
@@ -92,10 +107,7 @@
       *ngIf="messageChanged"
       class="position-absolute top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center sending-overlay"
     >
-      <span
-        class="text-center messageBlink"
-        >{{ sendMessage }}</span
-      >
+      <span class="text-center messageBlink">{{ sendMessage }}</span>
     </div>
   </form>
 </div>

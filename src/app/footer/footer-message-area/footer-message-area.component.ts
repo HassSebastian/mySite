@@ -25,36 +25,55 @@ export class FooterMessageAreaComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  handleKeyPressName(event: any) {
+    const inputValue = event.target.value;
+    this.nameTest.test(inputValue)
+      ? (this.booleanNameRequired = 1)
+      : (this.booleanNameRequired = 2);
+  }
+  handleKeyPressEmail(event: any) {
+    const inputValue = event.target.value;
+    this.emailTest.test(inputValue)
+      ? (this.booleanEmailRequired = 1)
+      : (this.booleanEmailRequired = 2);
+  }
+  handleKeyPressMessage(event: any) {
+    const inputValue = event.target.value;
+    this.messageTest.test(inputValue)
+      ? (this.booleanMessageRequired = 1)
+      : (this.booleanMessageRequired = 2);
+  }
+
   checkValueMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
+    // nameField.disabled = true;
+    // emailField.disabled = true;
+    // messageField.disabled = true;
 
-    this.nameTest.test(nameField.value)
-      ? (this.booleanNameRequired = 1)
-      : (this.booleanNameRequired = 2);
+    // this.nameTest.test(nameField.value)
+    //   ? (this.booleanNameRequired = 1)
+    //   : (this.booleanNameRequired = 2);
 
-    this.emailTest.test(emailField.value)
-      ? (this.booleanEmailRequired = 1)
-      : (this.booleanEmailRequired = 2);
+    // this.emailTest.test(emailField.value)
+    //   ? (this.booleanEmailRequired = 1)
+    //   : (this.booleanEmailRequired = 2);
 
-    this.messageTest.test(messageField.value)
-      ? (this.booleanMessageRequired = 1)
-      : (this.booleanMessageRequired = 2);
+    // this.messageTest.test(messageField.value)
+    //   ? (this.booleanMessageRequired = 1)
+    //   : (this.booleanMessageRequired = 2);
 
     if (this.messageValueChanged()) {
       this.messageChanged = true;
       setTimeout(() => {
-        this.sendMail(nameField, emailField, messageField);
+        this.sendMail(nameField.value, emailField.value, messageField.value);
       }, 3000);
     }
 
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
+    // nameField.disabled = false;
+    // emailField.disabled = false;
+    // messageField.disabled = false;
   }
 
   messageValueChanged() {
@@ -78,6 +97,10 @@ export class FooterMessageAreaComponent implements OnInit {
       nameField.value = '';
       emailField.value = '';
       messageField.value = '';
+
+      this.booleanNameRequired = 0;
+      this.booleanEmailRequired = 0;
+      this.booleanMessageRequired = 0;
     }, 3000);
 
     let fd = new FormData();
