@@ -32,7 +32,8 @@
         name="name"
         required
         placeholder="First and last name please"
-        (keydown)="handleKeyPressName($event)"
+        (keydown)="handleKeyPress($event, 'name')"
+        #nameField
       />
       <div
         [style.color]="booleanNameRequired == 2 ? 'red' : ''"
@@ -55,7 +56,8 @@
         type="email"
         name="email"
         required
-        (keydown)="handleKeyPressEmail($event)"
+        (keydown)="handleKeyPress($event, 'email')"
+        #emailField
       />
       <div
         [style.color]="booleanEmailRequired == 2 ? 'red' : ''"
@@ -77,7 +79,8 @@
         class="w-100"
         type="text"
         name="message"
-        (keydown)="handleKeyPressMessage($event)"
+        (keydown)="handleKeyPress($event, 'message')"
+        #messageField
       ></textarea>
       <div
         [style.color]="booleanMessageRequired == 2 ? 'red' : ''"

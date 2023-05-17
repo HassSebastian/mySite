@@ -25,6 +25,6 @@ export class PotfolioPokedexComponent {
   }
 
   hideDescription() {
-    this.slide = false;
+    window.innerWidth < 880 ? (this.slide = true) : (this.slide = false);
   }
 }

@@ -23,57 +23,49 @@ export class FooterMessageAreaComponent implements OnInit {
   booleanEmailRequired: number = 0;
   booleanMessageRequired: number = 0;
 
+
   ngOnInit(): void {}
 
-  handleKeyPressName(event: any) {
+
+  handleKeyPress(event: any, inputType: string) {
     const inputValue = event.target.value;
-    this.nameTest.test(inputValue)
-      ? (this.booleanNameRequired = 1)
-      : (this.booleanNameRequired = 2);
+    let booleanRequired: number;
+  
+    switch (inputType) {
+      case 'name':
+        booleanRequired = this.nameTest.test(inputValue) ? 1 : 2;
+        this.booleanNameRequired = booleanRequired;
+        break;
+      case 'email':
+        booleanRequired = this.emailTest.test(inputValue) ? 1 : 2;
+        this.booleanEmailRequired = booleanRequired;
+        break;
+      case 'message':
+        booleanRequired = this.messageTest.test(inputValue) ? 1 : 2;
+        this.booleanMessageRequired = booleanRequired;
+        break;
+      default:
+        break;
+    }
   }
-  handleKeyPressEmail(event: any) {
-    const inputValue = event.target.value;
-    this.emailTest.test(inputValue)
-      ? (this.booleanEmailRequired = 1)
-      : (this.booleanEmailRequired = 2);
-  }
-  handleKeyPressMessage(event: any) {
-    const inputValue = event.target.value;
-    this.messageTest.test(inputValue)
-      ? (this.booleanMessageRequired = 1)
-      : (this.booleanMessageRequired = 2);
-  }
+  
 
   checkValueMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    // nameField.disabled = true;
-    // emailField.disabled = true;
-    // messageField.disabled = true;
-
-    // this.nameTest.test(nameField.value)
-    //   ? (this.booleanNameRequired = 1)
-    //   : (this.booleanNameRequired = 2);
-
-    // this.emailTest.test(emailField.value)
-    //   ? (this.booleanEmailRequired = 1)
-    //   : (this.booleanEmailRequired = 2);
-
-    // this.messageTest.test(messageField.value)
-    //   ? (this.booleanMessageRequired = 1)
-    //   : (this.booleanMessageRequired = 2);
 
     if (this.messageValueChanged()) {
       this.messageChanged = true;
       setTimeout(() => {
-        this.sendMail(nameField.value, emailField.value, messageField.value);
+        this.sendMail(nameField, emailField, messageField);
       }, 3000);
+    } 
+    else {
+      if (this.booleanNameRequired == 0) this.booleanNameRequired = 2;
+      if (this.booleanEmailRequired == 0) this.booleanEmailRequired = 2;
+      if (this.booleanMessageRequired == 0) this.booleanMessageRequired = 2;
     }
-
-    // nameField.disabled = false;
-    // emailField.disabled = false;
-    // messageField.disabled = false;
   }
 
   messageValueChanged() {
@@ -108,9 +100,23 @@ export class FooterMessageAreaComponent implements OnInit {
     fd.append('email', emailField.value);
     fd.append('message', messageField.value);
 
-    await fetch('https://sebastian-hass.de/assets/email-send/send_mail.php', {
-      method: 'POST',
-      body: fd,
-    });
+    try {
+      const response = await fetch('https://sebastian-hass.de/assets/email-send/send_mail.php', {
+        method: 'POST',
+        body: fd,
+      });
+
+      if (response.ok) {
+        // Erfolgreich versendet
+        const confirmation = await response.text();
+        console.log('Bestätigung:', confirmation);
+      } else {
+        // Fehler beim Versenden
+        const error = await response.text();
+        console.log('Fehler:', error);
+      }
+    } catch (error) {
+      console.log('Fehler:', error);
+    }
   }
 }
