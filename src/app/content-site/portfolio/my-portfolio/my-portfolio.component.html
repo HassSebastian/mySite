@@ -1,0 +1,50 @@
+<div
+  class="mt-5 mb-5"
+  (mouseenter)="showDescription()"
+  (mouseleave)="hideDescription()"
+>
+  <div class="position-relative d-flex justify-content-between w-100 mediaBox">
+    <div class="w-50 order3 descriptionContainerBox">
+      <span class="fontNumbers">03/04</span>
+      <div [style.opacity]="slide ? '1' : '0'" class="descriptionContainer">
+        <span class="fontHeadline">My Portfolio</span>
+        <span class="fontLanguage">Angular | TypeScript | SCSS | Bootstrap </span>
+        <span class="fontDescription"
+          >A simple Jump-and-Run game based on an object-oriented approach. Help
+          El-Pollo-Loco to find coins and poison bottles to fight agins the
+          killer endboss.</span
+        >
+      </div>
+    </div>
+    <div class="w-50 imgContainer order2">
+      <img
+        [style]="{
+          filter: slide ? 'grayscale(0)' : 'grayscale(1)',
+          transform: slide ? 'scale(1.1)' : 'scale(1)',
+          transition: 'transform 300ms'
+        }"
+        src="./assets/img/project/elpollo.png"
+      />
+    </div>
+    <div [style.opacity]="slide ? '1' : '0'" class="imgBorderLeft"></div>
+    <img
+      [style.opacity]="slide ? '1' : '0'"
+      [class.arrowRotateLeft]="slide"
+      class="position-absolute arrow"
+      src="./assets/img/arrow.png"
+    />
+
+    <div
+      [class.showDescriptionLeft]="slide"
+      class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideLeft"
+    >
+      <a
+        class="buttonHover"
+        href="https://github.com/HassSebastian/mySite"
+        target="_blank"
+        >GitHub</a
+      >
+    </div>
+  </div>
+</div>
+

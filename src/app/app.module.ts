@@ -26,6 +26,7 @@ import { FormsModule } from '@angular/forms';
 import { ResponsiveMenuComponent } from './header/responsive-menu/responsive-menu.component';
 import { ServiceService } from './service.service';
 import { LegalNoticeComponent } from './footer/footer-legal-notice/legal-notice/legal-notice.component';
+import { MyPortfolioComponent } from './content-site/portfolio/my-portfolio/my-portfolio.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { LegalNoticeComponent } from './footer/footer-legal-notice/legal-notice/
     PortfolioRofComponent,
     ResponsiveMenuComponent,
     LegalNoticeComponent,
+    MyPortfolioComponent,
   ],
   imports: [
     BrowserModule,
