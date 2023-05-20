@@ -8,6 +8,11 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
   constructor(private el: ElementRef) {}
 
+  
+  /**
+   * Called when component life begins.
+   *
+   */
   ngOnInit() {
     this.el.nativeElement.scrollIntoView();
   }

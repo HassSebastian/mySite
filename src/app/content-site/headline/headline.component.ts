@@ -4,17 +4,19 @@ import { ServiceService } from 'src/app/service.service';
 @Component({
   selector: 'app-headline',
   templateUrl: './headline.component.html',
-  styleUrls: ['./headline.component.scss']
+  styleUrls: ['./headline.component.scss'],
 })
 export class HeadlineComponent {
+  constructor(private service: ServiceService) {}
 
-
-
-constructor(private service: ServiceService){}
-
-scrollTo(elementId: string): void {
-this.service.scrollTo(elementId);
-}
-
-
+  
+  /**
+   * Scrolls to the specified item by ID.
+   *
+   * @param {string} elementId - The ID of the item to scroll to.
+   *
+   */
+  scrollTo(elementId: string): void {
+    this.service.scrollTo(elementId);
+  }
 }
