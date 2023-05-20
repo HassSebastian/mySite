@@ -7,7 +7,9 @@ import { Component, HostListener } from '@angular/core';
 })
 export class MyPortfolioComponent {
   slide: boolean = false;
+
   @HostListener('window:resize', ['$event'])
+  
   onWindowResize(event: Event) {
     const screenWidth = window.innerWidth;
     if (screenWidth < 880) {

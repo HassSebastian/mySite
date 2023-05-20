@@ -11,6 +11,7 @@ export class AboutMeComponent {
   showBorder() {
     this.showHover = true;
   }
+  
   hideBorder() {
     this.showHover = false;
   }

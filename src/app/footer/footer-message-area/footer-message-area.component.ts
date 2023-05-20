@@ -113,7 +113,7 @@ export class FooterMessageAreaComponent implements OnInit {
       } else {
         // Fehler beim Versenden
         const error = await response.text();
-        console.log('Fehler:', error);
+        console.log('Fehler beim Versenden:', error);
       }
     } catch (error) {
       console.log('Fehler:', error);
