@@ -74,6 +74,7 @@
   border-top: 200px solid #fffcf3;
   border-bottom: 0 solid transparent;
   border-left: 150vw solid transparent;
+  margin-top: -1.5px;
 }
 
 .headline {
@@ -86,11 +87,18 @@
   z-index: 1;
 }
 
-@media (max-width: 1220px) {
+.responsiveFooter{
+  height: 300px;
+}
+
+@media (max-width: 1250px) {
   .menuStyle {
     .respoMenuFont {
       font-size: 73px;
     }
+  }
+  .headline{
+    top: 70px;
   }
 }
 
@@ -110,6 +118,28 @@
     .respoMenuFont {
       font-size: 33px;
     }
+  }
+}
+
+@media(max-height:1000px){
+  .headline{
+    display: none;
+  }
+}
+
+
+@media(max-height:822px){
+  .menuStyle{
+    height: 100px;
+  }
+}
+
+@media(max-height:740px){
+  .triangle{
+    display: none;
+  }
+  .responsiveFooter{
+    height: 170px;
   }
 }
 
