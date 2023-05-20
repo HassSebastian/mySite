@@ -16,13 +16,14 @@
     </div>
     <div class="w-50 descriptionContainerBox">
       <span class="fontNumbers float-end text-end">02/05</span>
-      <div
-        [style.opacity]="slide ? '1' : '0'"
-        class="descriptionContainer float-end text-end"
-      >
-        <span class="fontHeadline">Ring of Fire</span>
-        <span class="fontLanguage">Angular | Typescript | SCSS | Firebase</span>
-        <span class="fontDescription"
+      <div class="descriptionContainer float-end text-end">
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-3"
+          >Ring of Fire</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage"
+          >Angular | Typescript | SCSS | Firebase</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontDescription"
           >Ring Of Fire is an interactive drinking game app built using Angular,
           Firebase, and Material Design. It provides a fun way to play with
           friends and family while enjoying a few drinks at the same time.
@@ -41,19 +42,23 @@
       [class.showDescriptionRight]="slide"
       class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideRight"
     >
-      <a
-        class="buttonHover"
-        href="https://github.com/HassSebastian/Ring-Of-Fire"
-        target="_blank"
-        >GitHub</a
-      >
-      <a
-        class="buttonHover"
-        href="https://ringoffire.sebastian-hass.de/index.html"
-        target="_blank"
-      >
-        Live
-      </a>
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://github.com/HassSebastian/Ring-Of-Fire"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://ringoffire.sebastian-hass.de/index.html"
+          target="_blank"
+        >
+          Live
+        </a>
+      </div>
     </div>
   </div>
 </div>

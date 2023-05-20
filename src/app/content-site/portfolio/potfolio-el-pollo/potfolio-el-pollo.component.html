@@ -6,10 +6,14 @@
   <div class="position-relative d-flex justify-content-between w-100 mediaBox">
     <div class="w-50 order3 descriptionContainerBox">
       <span class="fontNumbers">03/05</span>
-      <div [style.opacity]="slide ? '1' : '0'" class="descriptionContainer">
-        <span class="fontHeadline">El Pollo Loco</span>
-        <span class="fontLanguage">JavaScript | Canvas | CSS</span>
-        <span class="fontDescription"
+      <div class="descriptionContainer">
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-3"
+          >El Pollo Loco</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage"
+          >JavaScript | Canvas | CSS</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontDescription"
           >A simple Jump-and-Run game based on an object-oriented approach. Help
           El-Pollo-Loco to find coins and poison bottles to fight agins the
           killer endboss.</span
@@ -38,18 +42,22 @@
       [class.showDescriptionLeft]="slide"
       class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideLeft"
     >
-      <a
-        class="buttonHover"
-        href="https://github.com/HassSebastian/el-Pollo"
-        target="_blank"
-        >GitHub</a
-      >
-      <a
-        class="buttonHover"
-        href="https://elpollo.sebastian-hass.de/index.html"
-        target="_blank"
-        >Live</a
-      >
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://github.com/HassSebastian/el-Pollo"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://elpollo.sebastian-hass.de/index.html"
+          target="_blank"
+          >Live</a
+        >
+      </div>
     </div>
   </div>
 </div>

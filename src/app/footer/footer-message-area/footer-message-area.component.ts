@@ -178,7 +178,7 @@ export class FooterMessageAreaComponent implements OnInit {
    *
    */
   emailSendinOK(nameField: any, emailField: any, messageField: any) {
-    this.sendMessage = 'Thanks for message :-)';
+    this.sendMessage = 'Thanks for message';
     setTimeout(() => {
       this.messageChanged = false;
       this.sendMessage = 'Message sending';

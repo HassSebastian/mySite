@@ -6,10 +6,14 @@
   <div class="position-relative d-flex justify-content-between w-100 mediaBox">
     <div class="w-50 order3 descriptionContainerBox">
       <span class="fontNumbers">01/05</span>
-      <div [style.opacity]="slide ? '1' : '0'" class="descriptionContainer">
-        <span class="fontHeadline">Join</span>
-        <span class="fontLanguage">JavaScript | HTML | CSS</span>
-        <span class="fontDescription"
+      <div class="descriptionContainer">
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-3"
+          >Join</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage"
+          >JavaScript | HTML | CSS</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontDescription"
           >Task manager inspired by the Kanban System. Create and organize tasks
           using drag and drop functions, assign users and categories.
         </span>
@@ -36,19 +40,23 @@
       [class.showDescriptionLeft]="slide"
       class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideLeft"
     >
-      <a
-        class="buttonHover"
-        href="https://github.com/HassSebastian/Join-privat-Abgabe"
-        target="_blank"
-        >GitHub</a
-      >
-      <a
-        class="buttonHover"
-        href="https://join.sebastian-hass.de/index.html"
-        target="_blank"
-      >
-        Live
-      </a>
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://github.com/HassSebastian/Join-privat-Abgabe"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://join.sebastian-hass.de/index.html"
+          target="_blank"
+        >
+          Live
+        </a>
+      </div>
     </div>
   </div>
 </div>

@@ -16,13 +16,14 @@
     </div>
     <div class="w-50 descriptionContainerBox">
       <span class="fontNumbers float-end text-end">04/05</span>
-      <div
-        [style.opacity]="slide ? '1' : '0'"
-        class="descriptionContainer float-end text-end"
-      >
-        <span class="fontHeadline">Pokedex</span>
-        <span class="fontLanguage">JavaScript | HTML | CSS | API</span>
-        <span class="fontDescription"
+      <div class="descriptionContainer float-end text-end">
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-3"
+          >Pokedex</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage"
+          >JavaScript | HTML | CSS | API</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontDescription"
           >Based on PokéAPI a simple library that provides and catalogues
           pokemon information
         </span>
@@ -40,18 +41,22 @@
       [class.showDescriptionRight]="slide"
       class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideRight"
     >
-      <a
-        class="buttonHover"
-        href="https://github.com/HassSebastian/pokedex"
-        target="_blank"
-        >GitHub</a
-      >
-      <a
-        class="buttonHover"
-        href="https://pokedex.sebastian-hass.de/index.html"
-        target="_blank"
-        >Live</a
-      >
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://github.com/HassSebastian/pokedex"
+          target="_blank"
+          >GitHub</a
+        >
+      </div>
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://pokedex.sebastian-hass.de/index.html"
+          target="_blank"
+          >Live</a
+        >
+      </div>
     </div>
   </div>
 </div>

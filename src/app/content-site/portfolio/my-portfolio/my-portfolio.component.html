@@ -6,10 +6,10 @@
   <div class="position-relative d-flex justify-content-between w-100 mediaBox">
     <div class="w-50 order3 descriptionContainerBox">
       <span class="fontNumbers">05/05</span>
-      <div [style.opacity]="slide ? '1' : '0'" class="descriptionContainer">
-        <span class="fontHeadline">My Portfolio</span>
-        <span class="fontLanguage">Angular | TypeScript | SCSS | Bootstrap </span>
-        <span class="fontDescription"
+      <div class="descriptionContainer">
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-5">My Portfolio</span>
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage">Angular | TypeScript | SCSS | Bootstrap </span>
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontDescription"
           >This is my portfolio page.</span
         >
       </div>
@@ -36,12 +36,14 @@
       [class.showDescriptionLeft]="slide"
       class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideLeft"
     >
+    <div class="buttonContainer">
       <a
         class="buttonHover"
         href="https://github.com/HassSebastian/mySite"
         target="_blank"
         >GitHub</a
       >
+      </div>
     </div>
   </div>
 </div>
