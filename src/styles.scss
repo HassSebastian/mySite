@@ -139,8 +139,11 @@ body {
 }
 
 @media (max-width: 840px) {
+  .buttonContainer{
+    width: 115px;
+  }
   .buttonHover {
-    width: 117px;
+    width: 115px;
     height: 37px;
     font-size: 17px;
     &:hover {

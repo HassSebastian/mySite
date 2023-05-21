@@ -10,3 +10,13 @@
   font-size: 1.5vw;
   font-weight: 500;
 }
+
+
+@media(max-width:840px){
+  .fontHeadline{
+    font-size: 35px;
+  }
+  .fontDescription{
+    font-size: 17px;
+  }
+}
