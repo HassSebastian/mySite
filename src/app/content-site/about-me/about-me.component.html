@@ -15,19 +15,11 @@
         <div class="buttonHover" (click)="scrollTo('email')">Let's talk</div>
       </div>
     </div>
-    <div
-      (mouseenter)="showBorder()"
-      (mouseleave)="hideBorder()"
-      class="position-relative"
-      style="height: fit-content"
-    >
-      <img src="assets/img/myPicture.jpg" />
-      <div
-        class="boxborder"
-        *ngIf="showHover"
-        (mouseenter)="showBorder()"
-        (mouseleave)="hideBorder()"
-      ></div>
+    <div (mouseenter)="showBorder(true)" (mouseleave)="showBorder(false)" class="position-relative"
+      style="height: fit-content">
+      <img *ngIf="!showHover" src="assets/img/myPicture1.jpg" />
+      <img *ngIf="showHover" style="filter: grayscale(0) !important;" src="assets/img/myPicture2.jpg" />
+      <div class="boxborder" *ngIf="showHover" (mouseenter)="showBorder(true)" (mouseleave)="showBorder(false)"></div>
     </div>
   </div>
 </div>

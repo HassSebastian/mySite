@@ -12,21 +12,13 @@ export class AboutMeComponent {
 
   
   /**
-   * Activates the display of the frame.
+   * Activates or disables the display of the frame.
    *
    */
-  showBorder() {
-    this.showHover = true;
+  showBorder(select:boolean) {
+    this.showHover = select;
   }
 
-
-  /**
-   * Disables the frame display.
-   *
-   */
-  hideBorder() {
-    this.showHover = false;
-  }
 
 
   /**
