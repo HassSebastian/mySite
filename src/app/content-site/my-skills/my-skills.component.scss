@@ -6,11 +6,11 @@
   height: 104px;
 }
 
-.fontHeadline{
+.fontHeadline {
   top: 50px;
   left: calc(50% - (541px / 2));
   width: fit-content;
-  font-family: 'Syne';
+  font-family: "Syne";
   font-size: 78px;
   font-weight: 900;
   background-color: #fffcf3;
@@ -30,18 +30,31 @@
 }
 
 .skillHover {
-  img {
-    transition: transform 250ms;
-  }
+  overflow: hidden;
   &:hover {
     span {
       color: #ff9900;
     }
     img {
-      filter: brightness(1) !important;
-      transform: scale(1.5) rotateY(360deg) translateY(-20px);
-      transform-origin: center center 10px;
+      animation: skillRotate 250ms linear;
     }
+  }
+}
+
+@keyframes skillRotate {
+  0% {
+    transform: translate(0);
+  }
+  33% {
+    filter: brightness(1);
+    transform: translate(40px) scale(.8);
+  }
+  66% {
+    filter: brightness(1);
+    transform: translate(-80px) scale(.8);
+  }
+  100% {
+    transform: translate(0);
   }
 }
 
@@ -61,24 +74,24 @@
     padding: 50px;
     gap: 50px;
   }
-  .fontHeadline{
+  .fontHeadline {
     top: 35px;
     left: calc(50% - (358px / 2));
     font-size: 50px;
   }
-  .itemStyle{
+  .itemStyle {
     width: 55px;
     height: 56px;
-  margin-top: 32px;
+    margin-top: 32px;
   }
 }
 
-@media(max-width: 620px ){
+@media (max-width: 620px) {
   .skillBox {
     padding: 50px 10px;
-    gap:50px;
+    gap: 50px;
   }
-  .fontHeadline{
+  .fontHeadline {
     top: 23px;
     left: calc(50% - (228px / 2));
     font-size: 30px;
