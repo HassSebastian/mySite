@@ -9,7 +9,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class FooterMessageAreaComponent implements OnInit {
   nameTest = /^[a-zA-Zäöüß]{1,50}\s[a-zA-Zäöüß]{1,50}$/;
   emailTest = /\S+@\S+\.\S+/;
-  messageTest = /^[a-zA-Z0-9\s.,:;!?]+$/;
+  messageTest = /^[a-zA-Z0-9\s.,:;!?äÄöÖüÜß]+$/;
 
   sendMessage: string = 'Message sending';
   messageChanged: boolean = false;
