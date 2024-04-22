@@ -5,7 +5,7 @@
 >
   <div class="position-relative d-flex justify-content-between w-100 mediaBox">
     <div class="w-50 imgContainer">
-      <img
+      <img draggable="false"
         [style]="{
           filter: slide ? 'grayscale(0)' : 'grayscale(1)',
           transform: slide ? 'scale(1.1)' : 'scale(1)',
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div [style.opacity]="slide ? '1' : '0'" class="imgBorderRight"></div>
-    <img
+    <img draggable="false"
       [style.opacity]="slide ? '1' : '0'"
       [class.arrowRotateRight]="slide"
       class="position-absolute arrow"

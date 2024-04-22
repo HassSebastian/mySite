@@ -3,7 +3,7 @@
 >
   <div class="d-flex flex-column justify-content-around">
     <div (click)="scrollTo('headline')">
-      <img class="logoAnimation" src="./assets/img/meinlogo-white.png" />
+      <img draggable="false" class="logoAnimation" src="./assets/img/meinlogo-white.png" />
     </div>
     <div (click)="scrollTo('headline')" class="nameStyle">&#64; Sebastian Haß 2023</div>
   </div>
@@ -13,16 +13,16 @@
         class="imgHover"
         href="https://github.com/HassSebastian"
         target="_blank"
-        ><img src="./assets/img/github.png"
+        ><img draggable="false" src="./assets/img/github.png"
       /></a>
       <div (click)="scrollTo('email')" class="imgHover">
-        <img src="./assets/img/email.png" />
+        <img draggable="false" src="./assets/img/email.png" />
       </div>
       <a
         class="imgHover"
         href="https://linkedin.com/in/sebastian-haß-895819275"
         target="_blank"
-        ><img src="./assets/img/linkedin.png"
+        ><img draggable="false" src="./assets/img/linkedin.png"
       /></a>
     </div>
     <span (click)="showLN()" class="LegalNotice">Imprint</span>

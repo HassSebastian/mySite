@@ -2,7 +2,7 @@
 
 ########### CONFIG ###############
 
-$recipient = 'info@sebastian-hass.de'; // Bitte hier deine E-Mail-Adresse angeben
+$recipient = 'sebastian.hass76@gmail.com'; // Bitte hier deine E-Mail-Adresse angeben
 
 ########### CONFIG END ###########
 
@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
 ########### CONFIG ###############
 
-$recipient = 'info@sebastian-hass.de'; // Bitte hier deine E-Mail-Adresse angeben
+$recipient = 'sebastian.hass76@gmail.com'; // Bitte hier deine E-Mail-Adresse angeben
 
 ########### CONFIG END ###########
 

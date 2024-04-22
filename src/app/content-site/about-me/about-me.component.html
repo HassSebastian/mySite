@@ -17,8 +17,8 @@
     </div>
     <div (mouseenter)="showBorder(true)" (mouseleave)="showBorder(false)" class="position-relative"
       style="height: fit-content">
-      <img *ngIf="!showHover" src="assets/img/myPicture1.jpg" />
-      <img *ngIf="showHover" style="filter: grayscale(0) !important;" src="assets/img/myPicture2.jpg" />
+      <img draggable="false" *ngIf="!showHover" src="assets/img/myPicture1.jpg" />
+      <img draggable="false" *ngIf="showHover" style="filter: grayscale(0) !important;" src="assets/img/myPicture2.jpg" />
       <div class="boxborder" *ngIf="showHover" (mouseenter)="showBorder(true)" (mouseleave)="showBorder(false)"></div>
     </div>
   </div>

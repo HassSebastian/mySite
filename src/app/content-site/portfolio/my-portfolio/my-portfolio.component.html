@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="w-50 imgContainer order2">
-      <img
+      <img draggable="false"
         [style]="{
           filter: slide ? 'grayscale(0)' : 'grayscale(1)',
           transform: slide ? 'scale(1.1)' : 'scale(1)',
@@ -25,7 +25,7 @@
       />
     </div>
     <div [style.opacity]="slide ? '1' : '0'" class="imgBorderLeft"></div>
-    <img
+    <img draggable="false"
       [style.opacity]="slide ? '1' : '0'"
       [class.arrowRotateLeft]="slide"
       class="position-absolute arrow"
