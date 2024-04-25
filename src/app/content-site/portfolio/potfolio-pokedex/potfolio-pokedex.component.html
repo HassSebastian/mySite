@@ -5,7 +5,8 @@
 >
   <div class="position-relative d-flex justify-content-between w-100 mediaBox">
     <div class="w-50 imgContainer">
-      <img draggable="false"
+      <img
+        draggable="false"
         [style]="{
           filter: slide ? 'grayscale(0)' : 'grayscale(1)',
           transform: slide ? 'scale(1.1)' : 'scale(1)',
@@ -30,7 +31,8 @@
       </div>
     </div>
     <div [style.opacity]="slide ? '1' : '0'" class="imgBorderRight"></div>
-    <img draggable="false"
+    <img
+      draggable="false"
       [style.opacity]="slide ? '1' : '0'"
       [class.arrowRotateRight]="slide"
       class="position-absolute arrow"
@@ -41,21 +43,41 @@
       [class.showDescriptionRight]="slide"
       class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideRight"
     >
-      <div class="buttonContainer">
-        <a
-          class="buttonHover"
-          href="https://github.com/HassSebastian/pokedex"
-          target="_blank"
-          >GitHub</a
-        >
+      <div>
+        <div class="buttonContainer mb-3">
+          <a
+            class="buttonHover"
+            href="https://github.com/HassSebastian/pokedex"
+            target="_blank"
+            >GitHub JS</a
+          >
+        </div>
+        <div class="buttonContainer">
+          <a
+            class="buttonHover"
+            href="https://pokedex.sebastian-hass.de/index.html"
+            target="_blank"
+            >Live JS</a
+          >
+        </div>
       </div>
-      <div class="buttonContainer">
-        <a
-          class="buttonHover"
-          href="https://pokedex.sebastian-hass.de/index.html"
-          target="_blank"
-          >Live</a
-        >
+      <div>
+        <div class="buttonContainer mb-3">
+          <a
+            class="buttonHover"
+            href="https://github.com/HassSebastian/pokedex"
+            target="_blank"
+            >GitHub NG</a
+          >
+        </div>
+        <div class="buttonContainer">
+          <a
+            class="buttonHover"
+            href="https://pokedex.sebastian-hass.de/index.html"
+            target="_blank"
+            >Live NG</a
+          >
+        </div>
       </div>
     </div>
   </div>

@@ -7,15 +7,20 @@
     <div class="w-50 order3 descriptionContainerBox">
       <span class="fontNumbers">05/05</span>
       <div class="descriptionContainer">
-        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-5">My Portfolio</span>
-        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage">Angular | TypeScript | SCSS | Bootstrap </span>
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-5"
+          >My Portfolio</span
+        >
+        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage"
+          >Angular | TypeScript | SCSS | Bootstrap
+        </span>
         <span [style.opacity]="slide ? '1' : '0.2'" class="fontDescription"
           >This is my portfolio page.</span
         >
       </div>
     </div>
     <div class="w-50 imgContainer order2">
-      <img draggable="false"
+      <img
+        draggable="false"
         [style]="{
           filter: slide ? 'grayscale(0)' : 'grayscale(1)',
           transform: slide ? 'scale(1.1)' : 'scale(1)',
@@ -25,7 +30,8 @@
       />
     </div>
     <div [style.opacity]="slide ? '1' : '0'" class="imgBorderLeft"></div>
-    <img draggable="false"
+    <img
+      draggable="false"
       [style.opacity]="slide ? '1' : '0'"
       [class.arrowRotateLeft]="slide"
       class="position-absolute arrow"
@@ -34,17 +40,16 @@
 
     <div
       [class.showDescriptionLeft]="slide"
-      class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideLeft"
+      class="position-absolute bottom-0 d-flex mb-2 gap-5 justify-content-center buttonSlideLeft"
     >
-    <div class="buttonContainer">
-      <a
-        class="buttonHover"
-        href="https://github.com/HassSebastian/mySite"
-        target="_blank"
-        >GitHub</a
-      >
+      <div class="buttonContainer">
+        <a
+          class="buttonHover"
+          href="https://github.com/HassSebastian/mySite"
+          target="_blank"
+          >GitHub</a
+        >
       </div>
     </div>
   </div>
 </div>
-

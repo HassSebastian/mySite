@@ -173,7 +173,7 @@
   .descriptionContainer {
     align-items: center;
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
   .fontDescription {
     text-align: center;
@@ -182,22 +182,32 @@
     display: none;
   }
   .buttonSlideRight {
-    right: 31% !important;
-    bottom: -10px !important;
+    right: calc(50% - (282px / 2)) !important;
+
+    // right: 34% !important;
+    bottom: -40px !important;
     z-index: 2;
   }
   .buttonSlideLeft {
-    left: 31% !important;
+    left: 34% !important;
     bottom: -10px !important;
     z-index: 2;
   }
+  .imgContainer{
+    z-index: 0;
+  }
   .imgBorderRight {
-    left: calc(50% - (50% / 2));
-    bottom: -20px;
+    width: 100%;
+    // left: calc(50% - (50% / 2));
+    bottom: -50px;
   }
   .imgBorderLeft {
-    right: calc(50% - (50% / 2));
+    width: 100%;
+    // right: calc(50% - (50% / 2));
     bottom: -20px;
+  }
+  .arrow {
+    display: none;
   }
   .order2 {
     order: 2;
@@ -212,16 +222,16 @@
 
 @media (max-width: 840px) {
   .imgBorderLeft {
-    width: 100%;
+    // width: 100%;
     right: 0;
   }
   .imgBorderRight {
-    width: 100%;
+    // width: 100%;
     left: 0;
   }
-  .arrow {
-    display: none;
-  }
+  // .arrow {
+  //   display: none;
+  // }
   .descriptionContainer {
     margin-bottom: 30px;
     text-align: center !important;
