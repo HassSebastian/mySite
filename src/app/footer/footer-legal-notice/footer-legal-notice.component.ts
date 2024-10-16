@@ -11,7 +11,6 @@ export class FooterLegalNoticeComponent {
 
   constructor(private service: ServiceService) {}
 
-
   /**
    * Scrolls to the specified item ID.
    * @param {string} elementId - The ID of the item to scroll to.
@@ -21,7 +20,6 @@ export class FooterLegalNoticeComponent {
     this.service.scrollTo(elementId);
   }
 
-
   /**
    * Displays the legal notice.
    *
@@ -30,12 +28,20 @@ export class FooterLegalNoticeComponent {
     this.showLegalNotice = true;
   }
 
-  
   /**
    * Hides the legal notice.
    *
    */
   hideLN() {
     this.showLegalNotice = false;
+  }
+
+  /**
+   * Gibt das aktuelle Jahr als Zahl zurück.
+   * @returns Das aktuelle Jahr als Zahl.
+   *
+   */
+  getYear(): number {
+    return new Date().getFullYear();
   }
 }
