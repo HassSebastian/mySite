@@ -4,14 +4,15 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-
 export class ServiceService {
+
+  touchDisplay:boolean=false
+
   private showMenu: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
     false
   );
 
   public value$: Observable<boolean> = this.showMenu.asObservable();
-
 
   /**
    * Sets the value of the menu state.
@@ -23,7 +24,6 @@ export class ServiceService {
     this.showMenu.next(value);
   }
 
-
   /**
    * Retrieves the current value of the menu state.
    *
@@ -33,7 +33,6 @@ export class ServiceService {
   getValue(): boolean {
     return this.showMenu.getValue();
   }
-
 
   /**
    * Scrolls to the specified element with smooth behavior and hides the menu.
@@ -47,6 +46,14 @@ export class ServiceService {
       element.scrollIntoView({ behavior: 'smooth' });
       this.showMenu.next(false);
     }
+  }
+
+  isTouchDevice(): boolean {
+    return (
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(pointer: coarse)').matches
+    );
   }
 
   constructor() {}

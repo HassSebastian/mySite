@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { ServiceService } from 'src/app/service.service';
 
 @Component({
   selector: 'app-potfolio-join',
@@ -7,23 +8,29 @@ import { Component, HostListener } from '@angular/core';
 })
 export class PotfolioJoinComponent {
   slide: boolean = false;
-  @HostListener('window:resize', ['$event'])
+  // @HostListener('window:resize', ['$event'])
 
-  
-  /**
-   * Handles the "Window Resize" event and adjusts the behavior accordingly.
-   * @param {Event} event - The Resize event object.
-   *
-   */
-  onWindowResize(event: Event) {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 880) {
-      this.slide = true;
-    } else {
-      this.slide = false;
-    }
-  }
+  // /**
+  //  * Handles the "Window Resize" event and adjusts the behavior accordingly.
+  //  * @param {Event} event - The Resize event object.
+  //  *
+  //  */
+  // onWindowResize(event: Event) {
+  //   const screenWidth = window.innerWidth;
+  //   if (screenWidth < 880) {
+  //     this.slide = true;
+  //   } else {
+  //     this.slide = false;
+  //   }
+  // }
 
+  constructor(public service: ServiceService) {}
+
+  // ngOnInt() {
+  //   if (this.service.isTouchDevice()) {
+  //     this.slide = false;
+  //   }
+  // }
 
   /**
    * Activates the display of the description.
@@ -33,7 +40,6 @@ export class PotfolioJoinComponent {
     this.slide = true;
   }
 
-  
   /**
    * Disables the display of the description.
    *

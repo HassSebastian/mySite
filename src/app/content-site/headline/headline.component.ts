@@ -7,7 +7,10 @@ import { ServiceService } from 'src/app/service.service';
   styleUrls: ['./headline.component.scss'],
 })
 export class HeadlineComponent {
-  constructor(private service: ServiceService) {}
+
+  email:string="sebastian.hass76@gmail.com"
+
+  constructor(public service: ServiceService) {}
 
   
   /**

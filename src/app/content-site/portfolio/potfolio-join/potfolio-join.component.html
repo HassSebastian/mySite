@@ -7,13 +7,13 @@
     <div class="w-50 order3 descriptionContainerBox">
       <span class="fontNumbers">01/05</span>
       <div class="descriptionContainer">
-        <span [style.opacity]="slide ? '1' : '0.2'" class="fontHeadline mt-3"
+        <span [style.opacity]="service.isTouchDevice() ||slide ? '1' : '0.2'" class="fontHeadline mt-3"
           >Join</span
         >
-        <span [style.opacity]="slide ? '1' : '0.2'" class="fontLanguage"
+        <span [style.opacity]="service.isTouchDevice() ||slide ? '1' : '0.2'" class="fontLanguage"
           >JavaScript | HTML | CSS</span
         >
-        <span [style.opacity]="slide ? '1' : '0.2'" class="fontDescription"
+        <span [style.opacity]="service.isTouchDevice()||slide ? '1' : '0.2'" class="fontDescription"
           >Task manager inspired by the Kanban System. Create and organize tasks
           using drag and drop functions, assign users and categories.
         </span>
@@ -22,22 +22,22 @@
     <div class="w-50 imgContainer order2">
       <img draggable="false"
         [style]="{
-          filter: slide ? 'grayscale(0)' : 'grayscale(1)',
-          transform: slide ? 'scale(1.1)' : 'scale(1)',
+          filter: service.isTouchDevice()||slide ? 'grayscale(0)' : 'grayscale(1)',
+          transform: service.isTouchDevice()||slide ? 'scale(1.1)' : 'scale(1)',
           transition: 'transform 300ms'
         }"
         src="./assets/img/project/join.png"
       />
     </div>
-    <div [style.opacity]="slide ? '1' : '0'" class="imgBorderLeft"></div>
+    <div [style.opacity]="service.isTouchDevice()||slide ? '1' : '0'" class="imgBorderLeft"></div>
     <img draggable="false"
-      [style.opacity]="slide ? '1' : '0'"
-      [class.arrowRotateLeft]="slide"
+      [style.opacity]="service.isTouchDevice()||slide ? '1' : '0'"
+      [class.arrowRotateLeft]="service.isTouchDevice()||slide"
       class="position-absolute arrow"
       src="./assets/img/arrow.png"
     />
     <div
-      [class.showDescriptionLeft]="slide"
+      [class.showDescriptionLeft]="service.isTouchDevice()||slide"
       class="position-absolute bottom-0 d-flex mb-2 gap-5 buttonSlideLeft"
     >
       <div class="buttonContainer">
